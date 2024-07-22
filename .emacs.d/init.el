@@ -55,6 +55,7 @@
 (setq-default tab-width 4)
 (setq-default indent-line-function 'c-indent-line)
 (setq indent-line-function 'insert-tab)
+(setq-default c-basic-offset 4) ;; set indet for c / cpp ;; set indet for c / cpp
 ;; Aouto close brackets
 (electric-pair-mode 1)
 ;; Save cursor position
@@ -98,7 +99,7 @@
 (evil-define-key nil my-leader-map
     "ff" 'counsel-find-file
     "bi" 'ivy-switch-buffer
-    "b" 'counsel-bookmark
+    "bb" 'counsel-bookmark
     "t2" 'tab-new
     "t0" 'tab-close
     "tm" 'tab-move

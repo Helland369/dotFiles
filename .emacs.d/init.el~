@@ -55,6 +55,7 @@
 (setq-default tab-width 4)
 (setq-default indent-line-function 'c-indent-line)
 (setq indent-line-function 'insert-tab)
+(setq-default c-basic-offset 4)
 ;; Aouto close brackets
 (electric-pair-mode 1)
 ;; Save cursor position
@@ -98,14 +99,16 @@
 (evil-define-key nil my-leader-map
     "ff" 'counsel-find-file
     "bi" 'ivy-switch-buffer
-    "b" 'counsel-bookmark
+    "bb" 'counsel-bookmark
     "t2" 'tab-new
     "t0" 'tab-close
     "tm" 'tab-move
     "tu" 'tab-bar-undo-close-tab
     "tt" 'tab-bar-select-tab-by-name
     "wv" 'evil-window-vsplit
-    "wl" 'evil-window-right)
+    "ws" 'evil-window-split
+    "wl" 'evil-window-right
+    "wh" 'evil-window-left)
 
 
 ;; Dashboard
