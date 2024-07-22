@@ -1,0 +1,59 @@
+# DUNST CONFIG TEMPLATE
+# DO NOT MODIFY PLACEHOLDERS
+
+[global]
+
+    # MISC
+    monitor = 0
+    sort = yes
+
+    # DIMENSIONS
+    width = 400
+    height = 100
+    origin = top-right
+    offset = 30x50
+
+    # PADDING
+    padding = 5
+    horizontal_padding = 5
+
+    # BORDERS
+    frame_width = 1
+    separator_height = 1
+    separator_color = frame
+    corner_radius = 0
+
+    # TEXT
+    font = NotoSans Nerd Font
+    markup = full
+    format = "<b>%a</b>\n%s\n%b"
+    alignment = left
+    vertical_alignment = center
+    word_wrap = yes
+
+    # ICON
+    max_icon_size = 32
+    icon_position = left
+
+    # OPEN
+    browser = /usr/bin/brave
+    mouse_left_click="open_url"
+
+
+[urgency_low]
+    background = "#333333"
+    foreground = "#dcdcdc"
+    frame_color = "#5e81ac"
+    timeout = 5
+
+[urgency_normal]
+    background = "#333333"
+    foreground = "#dcdcdc"
+    frame_color = "#0000ff"
+    timeout = 5
+
+[urgency_critical]
+    background = "#333333"
+    foreground = "#dcdcdc"
+    frame_color = "#ff0000"
+    timeout = 10

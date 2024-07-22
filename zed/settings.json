@@ -1,0 +1,101 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "base_keymap": "VSCode",
+  "theme": "monokai Darker (Filter Spectrum)",
+  "vim_mode": true,
+  "buffer_font_family": "NotoSansM Nerd Font",
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": true
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": false,
+    "git_status": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true
+  },
+  "languages": {
+    "C++": {
+      "enable_language_server": true,
+      "ensure_final_newline_on_save": true,
+      "remove_trailing_whitespace_on_save": true,
+      "tab_size": 4,
+      "use_autoclose": true,
+      "always_treat_brackets_as_autoclosed": true
+    },
+    "C": {
+      "enable_language_server": true,
+      "ensure_final_newline_on_save": true,
+      "remove_trailing_whitespace_on_save": true,
+      "tab_size": 4,
+      "use_autoclose": true,
+      "always_treat_brackets_as_autoclosed": true
+    },
+    "HTML": {
+      "enable_language_server": true,
+      "always_treat_brackets_as_autoclosed": true,
+      "ensure_final_newline_on_save": true,
+      "tab_size": 4,
+      "remove_trailing_whitespace_on_save": true,
+      "use_autoclose": true
+    },
+    "CSS": {
+      "enable_language_server": true,
+      "ensure_final_newline_on_save": true,
+      "remove_trailing_whitespace_on_save": true,
+      "tab_size": 4,
+      "use_autoclose": true,
+      "always_treat_brackets_as_autoclosed": true
+    },
+    "JavaScript": {
+      "enable_language_server": true,
+      "ensure_final_newline_on_save": true,
+      "remove_trailing_whitespace_on_save": true,
+      "tab_size": 4,
+      "use_autoclose": true,
+      "always_treat_brackets_as_autoclosed": true
+    },
+    "C#": {
+      "enable_language_server": true,
+      "ensure_final_newline_on_save": true,
+      "remove_trailing_whitespace_on_save": true,
+      "tab_size": 4,
+      "use_autoclose": true,
+      "always_treat_brackets_as_autoclosed": true
+    }
+  },
+  "lsp": {
+    "clangd": {
+      "enable": true,
+      "binary": {
+        "path": "/usr/bin/clangd"
+      }
+    }
+    //"C#": {
+    //"enable": true,
+    //"binary": {
+    //"path": "/usr/bin/csharp-ls"
+    //}
+    //}
+  }
+}

@@ -1,0 +1,94 @@
+[colors]
+#bg = #2e3440
+bg = #000000
+fg = #dcdcdc
+
+pn-darker = #333333
+pn-light = #0000ff
+
+sn-dark = #d3d3d3
+sn-light = #eceff4
+
+f-mint = #0000ff
+f-bright = #ffff00
+f-washed = #81a1c1
+f-dark = #5e81ac
+
+a-green = #61ce3c
+a-magenta = #ff0000
+a-orange = #ff6400
+a-red = #8b0000
+
+[bar/mainbar]
+monitor = ${env:MONITOR}
+width = 100%
+height = 20
+background = ${colors.bg}
+foreground = ${colors.fg}
+font-0 = NotoSans Nerd Font:style=Bold:size=10;1
+separator = "|"
+separator-foreground = ${colors.pn-light}
+module-margin = 1
+modules-left = ewmh
+modules-center = xwindow
+modules-right = vpn network volume cpu date time tray
+
+[module/xwindow]
+type = internal/xwindow
+label = %instance%
+label-maxlen = 50
+label-empty = Empty
+label-empty-foreground = #707880
+
+[module/ewmh]
+type = internal/xworkspaces
+label-active = " %name% "
+label-active-background = ${colors.f-bright}
+label-active-foreground = ${colors.pn-darker}
+label-occupied = " %name% "
+label-occupied-background = ${colors.pn-light}
+label-urgent = " %name% "
+label-urgent-background = ${colors.a-orange}
+label-urgent-foreground = ${colors.win-urgent-fg}
+label-empty = " %name% "
+label-empty-foreground = ${colors.foreground}
+
+[module/date]
+type = internal/date
+date = " %a, %b %d "
+format-foreground = ${colors.a-magenta}
+
+[module/time]
+type = internal/date
+date = "%H:%M"
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+label = " CPU: %percentage:2%% "
+label-foreground = ${colors.f-bright}
+
+[module/volume]
+type = internal/pulseaudio
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+label-volume = " VOL: %percentage:2%% "
+label-volume-foreground = ${colors.f-mint}
+
+[module/network]
+type = internal/network
+interface = enp6s0
+interface-type = wired
+accumulate-states = true
+ 
+label-disconnected = " Not Connected "
+label-disconnected-foreground =${F#8b0000}
+format-disconnected = <label-disconnected>
+
+label-connected = " %{F#61ce3c}↓ %{F#d3d3d3}%downspeed:9%%{F#333333} | %{F#93e0e3}↑ %{F#dcdcdc}%upspeed:9%%{F-}"
+format-connected = <label-connected>
+
+[module/tray]
+type = internal/tray
+tray-padding = 3px
