@@ -55,7 +55,7 @@
 (setq-default tab-width 4)
 (setq-default indent-line-function 'c-indent-line)
 (setq indent-line-function 'insert-tab)
-(setq-default c-basic-offset 4)
+(setq-default c-basic-offset 4) ;; set indet for c / cpp ;; set indet for c / cpp
 ;; Aouto close brackets
 (electric-pair-mode 1)
 ;; Save cursor position
@@ -108,6 +108,8 @@
     "wv" 'evil-window-vsplit
     "ws" 'evil-window-split
     "wl" 'evil-window-right
+    "wk" 'evil-window-top
+    "wj" 'evil-window-bottom
     "wh" 'evil-window-left)
 
 
@@ -188,6 +190,9 @@
 (use-package counsel-projectile
     :config
     (counsel-projectile-mode))
+
+;; Magit
+(use-package magit)
 
 ;; LSP Mode
 (use-package lsp-mode
@@ -394,7 +399,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-    '(helpful counsel-projectile general treemacs-projectile projectile treemacs-nerd-icons treemacs-tab-bar treemacs-evil highlight-indent-guides dap-mode which-key web-mode nerd-icons-ivy-rich lsp-ui lsp-ivy flycheck evil-collection doom-themes doom-modeline dashboard counsel company-box)))
+    '(evil-magit magit helpful counsel-projectile general treemacs-projectile projectile treemacs-nerd-icons treemacs-tab-bar treemacs-evil highlight-indent-guides dap-mode which-key web-mode nerd-icons-ivy-rich lsp-ui lsp-ivy flycheck evil-collection doom-themes doom-modeline dashboard counsel company-box)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
