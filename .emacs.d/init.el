@@ -98,7 +98,8 @@
 
 (evil-define-key nil my-leader-map
     "ff" 'counsel-find-file
-    "bi" 'ivy-switch-buffer
+    "ft" 'treemacs
+    "bi" 'ibuffer
     "bb" 'counsel-bookmark
     "t2" 'tab-new
     "t0" 'tab-close
@@ -195,39 +196,7 @@
 ;; Magit
 (use-package magit)
 
-;; Treesitter
-(use-package tree-sitter
-  :ensure t)
-
-(use-package tree-sitter-langs
-    :after tree-sitter
-    :ensure t)
-
-(add-hook 'c++-mode-hook #'tree-sitter-mode)
-(add-hook 'c++-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'c-mode-hook #'tree-sitter-mode)
-(add-hook 'c-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'css-mode-hook #'tree-sitter-mode)
-(add-hook 'css-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'js-mode-hook #'tree-sitter-mode)
-(add-hook 'js-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'html-mode-hook #'tree-sitter-mode)
-(add-hook 'html-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'csharp-mode-hook #'tree-sitter-mode)
-(add-hook 'csharp-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'rst-mode-hook #'tree-sitter-mode)
-(add-hook 'rst-mode-hook #'tree-sitter-hl-mode)
-
-(add-hook 'web-mode-hook #'tree-sitter-mode)
-(add-hook 'web-mode-hook #'tree-sitter-hl-mode)
-
-;; LSP Mode
+;; Lsp Mode
 (use-package lsp-mode
     :init
     (setq lsp-keymap-prefix "C-c l")
@@ -432,7 +401,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-    '(tree-sitter-langs tree-sitter evil-magit magit helpful counsel-projectile general treemacs-projectile projectile treemacs-nerd-icons treemacs-tab-bar treemacs-evil highlight-indent-guides dap-mode which-key web-mode nerd-icons-ivy-rich lsp-ui lsp-ivy flycheck evil-collection doom-themes doom-modeline dashboard counsel company-box)))
+    '(ccls treesit tree-sitter-langs tree-sitter evil-magit magit helpful counsel-projectile general treemacs-projectile projectile treemacs-nerd-icons treemacs-tab-bar treemacs-evil highlight-indent-guides dap-mode which-key web-mode nerd-icons-ivy-rich lsp-ui lsp-ivy flycheck evil-collection doom-themes doom-modeline dashboard counsel company-box)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
