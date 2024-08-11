@@ -1,0 +1,110 @@
+ {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#948ae3",
+          "foreground": "#222222",
+          "style": "plain",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} \ue0b1",
+          "type": "os"
+        },
+        {
+          "background": "#8b888f",
+          "foreground": "#5ad4e6",
+          "style": "plain",
+          "template": " \uf0e7 ",
+          "type": "root"
+        },
+        {
+          "background": "#8b888f",
+          "foreground": "#7bd88f",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#8b888f",
+          "foreground": "#fce566",
+          "style": "plain",
+          "template": "<#26C6DA>\ue0b1 </>{{ .HEAD }} ",
+          "type": "git"
+        },
+        {
+          "background": "transparent",
+          "foreground": "#8b888f",
+          "style": "plain",
+          "template": "\ue0b0",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#8b888f",
+          "foreground": "#fce566",
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": " {{ .UserName }}@{{ .HostName }} <#26C6DA>\ue0b3</> ",
+          "type": "session"
+        },
+        {
+          "background": "#8b888f",
+          "foreground": "#fce566",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": " {{ .CurrentDate | date .Format }} \uf017 ",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#fd9353",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#FF5252{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}  
+
+
+
+
+
+
+   "_comment": {
+    "gray": "#8b888f",
+    "black": "#222222",
+    "blue": "#5ad4e6",
+    "green": "#7bd88f",
+    "orange": "#fd9353",
+    "red": "#fc618d",
+    "white": "#ffffff",
+    "yellow": "#fce566",
+    "purple": "#948ae3"
+   },
