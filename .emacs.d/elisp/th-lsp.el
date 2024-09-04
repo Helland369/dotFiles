@@ -29,6 +29,9 @@
     (setq lsp-ui-sideline-show-diagnostics nil)
     (setq lsp-ui-sideline-show-hover nil)
     (setq lsp-ui-doc-enable t)
+    (setq lsp-ui-doc-show-with-cursor nil)
+    (setq lsp-ui-doc-show-with-mouse t)
+    ;;(setq lsp-ui-doc-show-with-mouse nil)
     (setq lsp-ui-doc-position 'bottom))
 
 ;; Lsp ivy
@@ -39,9 +42,10 @@
 
 ;; Dap Mode
 (use-package dap-mode
+  :custom
+  (dap-auto-configure-features '(sessions locals tooltip))
   :config
-  (dap-auto-configure-mode)
-
+  (setq lsp-enable-dap-auto-configure nil)
   :bind
   (("<f7>" . dap-step-in)
    ("<f8>" . dap-next)

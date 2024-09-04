@@ -13,6 +13,18 @@
     ([remap describe-variable] . counsel-describe-variable)
     ([remap describe-key] . helpful-key))
 
+;; Hacker news
+(use-package hackernews)
+
+(push '("\\`\\*hackernews .*\\*\\'" display-buffer-same-window)
+      display-buffer-alist)
+
+;; ...or equivalently, starting with Emacs 30:
+
+;;(push '((category . hackernews) display-buffer-same-window)
+;;      display-buffer-alist)
+
+
 
 (provide 'th-misc)
-;;; misc.el ends here
+;;; th-misc.el ends here

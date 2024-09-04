@@ -42,7 +42,12 @@
     "pf" 'projectile-find-file
     "li" 'lsp-ui-imenu
     "ld" 'xref-find-definitions
+<<<<<<< HEAD
     "cc" 'comment-region)
+=======
+    "cc" 'evilnc-comment-or-uncomment-lines
+    "g" 'magit-status)
+>>>>>>> 4f4c34b (emacs)
     ;;"kk" 'evil-collection-unimpaired-move-text-up
     ;;"jj" 'evil-collection-unimpaired-move-text-down
 
