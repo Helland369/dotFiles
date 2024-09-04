@@ -44,10 +44,18 @@
     "ld" 'xref-find-definitions
 <<<<<<< HEAD
     "cc" 'comment-region)
+<<<<<<< HEAD
+    "cc" 'evilnc-comment-or-uncomment-lines
+    "g" 'magit-status)
+    "cc" 'evilnc-comment-or-uncomment-lines
+    "g" 'magit-status)
+
+=======
 =======
     "cc" 'evilnc-comment-or-uncomment-lines
     "g" 'magit-status)
 >>>>>>> 4f4c34b (emacs)
+>>>>>>> 6e81995 (emacs)
     ;;"kk" 'evil-collection-unimpaired-move-text-up
     ;;"jj" 'evil-collection-unimpaired-move-text-down
 
