@@ -35,10 +35,10 @@
 (setq column-number-mode t)
 ;; Indensts
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+(setq-default tab-width 4)
 ;;(setq-default indent-line-function 'c-indent-line)
 (setq indent-line-function 'insert-tab)
-(setq-default c-basic-offset 2) ;; set indet for c / cpp ;; set indet for c / cpp
+(setq-default c-basic-offset 4) ;; set indet for c / cpp ;; set indet for c / cpp
 ;; Aouto close brackets
 (electric-pair-mode 1)
 ;; Save cursor position
@@ -78,4 +78,4 @@
 
 
 (provide 'th-config)
-;;; config.el ends here
+;;; th-config.el ends here

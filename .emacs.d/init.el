@@ -11,21 +11,27 @@
 ;; Reset GC threshold and file name handlers
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (setq gc-cons-threshold 100000000)
+            (setq gc-cons-threshold 200000000)
             (setq file-name-handler-alist file-name-handler-alist-old)))
 
 ;; use-package
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(package-refresh-contents)
+;;(package-refresh-contents)
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
+  (package-refresh-contents)
   (package-install 'use-package))
 
 (setq use-package-always-ensure t)
 (require 'use-package)
+
+;; Disable automatic package loading and refreshing
+(setq package-enable-at-startup nil)
+;;(setq package-check-signature nil)  ;; Optional: if you don't want to check for signatures
+;;(setq package-archives nil) ;; Disable any package archives (if you set them elsewhere)
 
 ;; Define the path to the elisp directory
 (defvar th/elisp-dir (expand-file-name "elisp" user-emacs-directory)
@@ -66,7 +72,13 @@
  '(ignored-local-variable-values '((init . utf-8)))
  '(package-selected-packages
    '(yasnippet-snippets yasnippet dap-chrome evil-collection evil))
- '(safe-local-variable-values '((th-lsp . utf-8))))
+ '(safe-local-variable-values
+   '((th-evil . utf-8)
+     (th-misc . utf-8)
+     (th-webmode . utf-8)
+     (th-config . utf-8)
+     (th-dev . utf-8)
+     (th-lsp . utf-8))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

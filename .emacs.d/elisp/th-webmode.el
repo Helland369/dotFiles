@@ -12,12 +12,17 @@
    ("\\.mustache\\'" . web-mode)
    ("\\.djhtml\\'" . web-mode)
    ("\\.js[x]\\'" . web-mode)
-   ("\\.html\\'" . web-mode)
-   ("\\.css\\'" . web-mode)))
+   ("\\.html\\'" . web-mode)))
+   ;;("\\.css\\'" . web-mode)))
 
-(setq web-mode-markup-indent-offset 2)
-(setq web-mode-css-indent-offset 2)
-(setq web-mode-code-indent-offset 2)
+;; help with js//html indent
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(setq web-mode-enable-auto-indentation nil)
+(setq web-mode-script-padding 4) ;; Adjust the padding for script tags
+
+(setq web-mode-markup-indent-offset 4)
+(setq web-mode-css-indent-offset 4)
+(setq web-mode-code-indent-offset 4)
 
 (setq web-mode-enable-auto-pairing t)
 
@@ -25,4 +30,4 @@
 
 
 (provide 'th-webmode)
-;;; webmode.el ends here
+;;; th-webmode.el ends here

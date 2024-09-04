@@ -11,6 +11,8 @@
     (rst-mode . lsp)
     (js-mode . lsp)
     (web-mode . lsp)
+    (css-mode .lsp)
+    (html-mode . lsp)
     (lsp-mode . lsp-enable-which-key-integration)
     :commands lsp)
 

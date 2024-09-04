@@ -45,6 +45,21 @@
 (use-package js2-mode)
 (add-hook 'js-mode-hook 'js2-minor-mode) ;; Make js2-mode minor mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)) ;; Make js2 major mode
+(setq prettier-js-args '("--tab-width" "4" "--use-tabs" "false"))
+
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'web-mode-hook 'prettier-js-mode)
+;;(add-hook 'typescript-mode-hook 'prettier-js-mode)
+
+;; prettier JS // makie it auto indent
+(use-package prettier-js
+   :ensure t
+   :after (js2-mode)
+   :hook (js2-mode . prettier-js-mode))
+
+;; prettier instaled with yay -S prettier
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+
 
 (use-package which-key
   :config

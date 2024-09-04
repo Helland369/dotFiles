@@ -41,8 +41,15 @@
     "wh" 'evil-window-left
     "pf" 'projectile-find-file
     "li" 'lsp-ui-imenu
-    "ld" 'xref-find-definitions)
+    "ld" 'xref-find-definitions
+    "cc" 'comment-region)
+    ;;"kk" 'evil-collection-unimpaired-move-text-up
+    ;;"jj" 'evil-collection-unimpaired-move-text-down
+
+(define-key evil-normal-state-map (kbd "M-k") 'evil-collection-unimpaired-move-text-up)
+(define-key evil-normal-state-map (kbd "M-j") 'evil-collection-unimpaired-move-text-down)
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 
 
 (provide 'th-evil)
-;;; evil.el ends here
+;;; th-evil.el ends here
