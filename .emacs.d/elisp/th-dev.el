@@ -12,6 +12,9 @@
 ;; Magit
 (use-package magit)
 
+;; Auto revert for magit // update files when they change on disc // ex git pull
+(magit-auto-revert-mode t)
+
 ;; Indent Guide
 (use-package highlight-indent-guides)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)

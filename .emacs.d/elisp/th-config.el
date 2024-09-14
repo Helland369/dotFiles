@@ -62,6 +62,10 @@
 ;; Backup file
 (setq make-backup-files nil) ;; no more backupfile
 
+;; Auto revert // update files when they change on disc // ex if git pull
+(global-auto-revert-mode t)
+
+
 (use-package dashboard
     :config
     (dashboard-setup-startup-hook)
