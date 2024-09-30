@@ -12,6 +12,8 @@
     (evil-mode t)
     (evil-set-initial-state 'dashboard-mode 'normal))
 
+(evil-set-undo-system 'undo-redo)
+
 (use-package evil-collection
     :after evil
     :config
@@ -43,9 +45,13 @@
     "li" 'lsp-ui-imenu
     "ld" 'xref-find-definitions
     "cc" 'evilnc-comment-or-uncomment-lines
-    "g" 'magit-status)
-
-
+    "g" 'magit-status
+    "w=" 'count-words
+    "wd" 'downcase-word
+    "wu" 'upcase-word
+    "ef" 'ediff-files
+    "eF" 'ediff-files3
+    "dd" 'dired)
     ;;"kk" 'evil-collection-unimpaired-move-text-up
     ;;"jj" 'evil-collection-unimpaired-move-text-down
 

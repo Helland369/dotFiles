@@ -73,7 +73,9 @@
  '(package-selected-packages
    '(yasnippet-snippets yasnippet dap-chrome evil-collection evil))
  '(safe-local-variable-values
-   '((th-evil . utf-8)
+   '((th-treemacs . utf-8)
+     (th-mxmenu . utf-8)
+     (th-evil . utf-8)
      (th-misc . utf-8)
      (th-webmode . utf-8)
      (th-config . utf-8)
