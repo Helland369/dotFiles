@@ -1,0 +1,12 @@
+[Unit]
+    Description=Emacs: Emacs is love, Emacs is life
+    Documentation=info:emacs man emacs(1)
+
+[Service]
+    Type=forking
+    ExecStart=/usr/bin/emacs --daemon
+    ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+    Restart=always
+
+[Install]
+    WantedBy=default.target

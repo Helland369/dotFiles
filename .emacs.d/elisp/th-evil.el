@@ -51,7 +51,9 @@
     "wu" 'upcase-word
     "ef" 'ediff-files
     "eF" 'ediff-files3
-    "dd" 'dired)
+    "dd" 'dired
+    "ii" 'counsel-imenu
+    "ss" 'speedbar)
     ;;"kk" 'evil-collection-unimpaired-move-text-up
     ;;"jj" 'evil-collection-unimpaired-move-text-down
 

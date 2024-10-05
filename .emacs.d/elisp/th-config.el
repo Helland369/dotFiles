@@ -65,6 +65,10 @@
 ;; Auto revert // update files when they change on disc // ex if git pull
 (global-auto-revert-mode t)
 
+;; Help dired update
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)  ; Optional
+(setq auto-revert-use-notify t)
 
 (use-package dashboard
     :config
@@ -76,9 +80,16 @@
     (dashboard-center-content nil)
     (dashboard-icon-type 'nerd-icons)
     (dashboard-items '((recents . 5)
-                            (bookmarks . 5)
-                            (projects . 5)
-                            (registers . 5))))
+                       (bookmarks . 5)
+                       (projects . 5)
+                       (registers . 5))))
+
+;; Make emacsclient start in dashboard and not scratch buffer
+(add-hook 'after-init-hook (lambda ()
+                             (unless (dashboard-initial-buffer-p)
+                               (dashboard-refresh-buffer))))
+
+(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
 
 (provide 'th-config)
