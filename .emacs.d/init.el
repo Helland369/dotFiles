@@ -1,4 +1,28 @@
-;; -*- lexical-binding: t; -*-
+;;; in.el --- init el                                -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2024
+
+;; Author:  <Thomas Helland>
+;; Keywords: elisp,
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; 
+
+;;; Code:
 
 ;; Icrease gc treshold during starup
 (setq gc-cons-threshold most-positive-fixnum)
@@ -39,23 +63,20 @@
 (require 'th-web-dev)
 (require 'th-org)
 
+
+
+(provide 'init.el)
+;;; init.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("c8c4baac2988652a760554e0e7ce11a0fe0f8468736be2b79355c9d9cc14b751" "4ade6b630ba8cbab10703b27fd05bb43aaf8a3e5ba8c2dc1ea4a2de5f8d45882" "b5fd9c7429d52190235f2383e47d340d7ff769f141cd8f9e7a4629a81abc6b19" "aec7b55f2a13307a55517fdf08438863d694550565dee23181d2ebd973ebd6b8" default))
- '(ignored-local-variable-values '((lexical-bunding . t)))
  '(package-selected-packages
-   '(org-modern rainbow-delimiters rainbow-delimiter treesit js2-mode company-web web-mode lsp-ivy lsp-ui lsp-mode which-key witch-key flycheck highlight-indent-guides company-box company magit evil-nerd-commenter hackernews helpful nerd-icons-ivy-rich counsel doom-modeline doom-themes doom-theme nerd-icons dashboard evil)))
+   '(which-key web-mode rainbow-delimiters prettier-js org-modern nerd-icons-ivy-rich magit lsp-ui lsp-ivy js2-mode highlight-indent-guides helpful hackernews flycheck evil-nerd-commenter evil-collection doom-themes doom-modeline dashboard counsel company-web company-box)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-(provide 'init)
-;;; init.el ends here
