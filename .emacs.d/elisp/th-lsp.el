@@ -15,6 +15,9 @@
   (js-ts-mode . lsp-mode)
   (js2-mode . lsp-mode)
   (typescript-ts-mode . lsp-mode)
+  (web-mode . lsp)
+  (html-mode . lsp)
+  (css-ts-mode . lsp)
   (lsp-mode . lsp-enable-which-key-integration)
   :commands lsp)
 

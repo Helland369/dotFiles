@@ -10,7 +10,6 @@
   (define-key ediff-mode-map "k" 'ediff-previous-difference))
 
 ;; Dired
-
 (use-package dired
   :ensure nil
   :commands (dired dired-jump)

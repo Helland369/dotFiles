@@ -15,15 +15,18 @@
   (dashboard-set-heading-icons t)
   (dashboard-set-file-icons t)
   (dashboard-startup-banner 'logo)
-  (dashboard-center-content nil)
-  (dashboard-icon-type 'nerd-icons)
-  (dashboard-items '((recents . 6)
-                      (bookmarks . 6)
-                      (projects . 6)
-                      (agenda))))
+  (dashboard-center-content t)
+  (dashboard-display-icons-p t)
+  (dashboard-icon-type 'nerd-icons))
+  ;;(setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+
+  (setq dashboard-items '((recents . 5)
+                      (bookmarks . 5)
+                      (projects . 5)
+                      (agenda . 5)))
 
 ;; Make dashboard the startup screen
-(add-hook 'afther-init-hook (lambda ()
+(add-hook 'after-init-hook (lambda ()
                               (unless (dashboard-initial-buffer-p)
                                 (dashboard-refresh-buffer))))
 

@@ -50,5 +50,4 @@
   (ivy-rich-mode 1))
 
 
-
 (provide 'th-ivy)

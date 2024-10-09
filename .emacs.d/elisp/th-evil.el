@@ -27,40 +27,43 @@
 (keymap-set evil-motion-state-map "SPC" 'th-leader-map)
 (keymap-set evil-normal-state-map "SPC" 'th-leader-map)
 
+;; a b c d e f g h i j k l m n o p q r s t u v w x y z
+
 (evil-define-key nil th-leader-map
-  "ff" 'counsel-find-file
-  "bi" 'ibuffer
-  "ib" 'ivy-switch-buffer
   "bb" 'counsel-bookmark
+  "bi" 'ibuffer
+  "cc" 'evilnc-comment-or-uncomment-lines
+  "dd" 'dired
+  "ef" 'ediff-files
+  "eF" 'ediff-files3
+  "ff" 'counsel-find-file
+  "gg" 'magit-status
+  "ib" 'ivy-switch-buffer
+  "ii" 'counsel-imenu
+  "li" 'lsp-ui-imenu
+  "oa" 'org-agenda
+  "ss" 'speedbar
   "t2" 'tab-new
   "t0" 'tab-close
   "tm" 'tab-move
-  "tu" 'tab-bar-undo-close-tab
   "tt" 'tab-bar-select-tab-by-name
-  "wv" 'evil-window-vsplit
-  "ws" 'evil-window-split
-  "wl" 'evil-window-right
-  "wk" 'evil-window-top
-  "wj" 'evil-window-bottom
-  "wh" 'evil-window-left
-  "cc" 'evilnc-comment-or-uncomment-lines
-  "xd" 'xref-find-defenitions
+  "tu" 'tab-bar-undo-close-tab
   "w=" 'count-words
   "wd" 'downcase-word
+  "wh" 'evil-window-left
+  "wj" 'evil-window-bottom
+  "wk" 'evil-window-top
+  "wl" 'evil-window-right
+  "ws" 'evil-window-split
   "wu" 'upcase-word
-  "ef" 'ediff-files
-  "eF" 'ediff-files3
-  "dd" 'dired
-  "ii" 'counsel-imenu
-  "ss" 'speedbar
-  "wj" 'th-js2-web-mode)
+  "wv" 'evil-window-vsplit
+  "ww" 'th-js2-web-mode
+  "xd" 'xref-find-defenitions)
 
 ;; "ft" 'treemacs
 ;; "pf" 'projectile-find-file
-;; "li" 'lsp-ui-imenu
-;; "gg" 'magit-status
 
-;; Move a whole text block // M+k // M+j
+;; move a whole text block // M+k // M+j
 (define-key evil-normal-state-map (kbd "M-k") 'evil-collection-unimpaired-move-text-up)
 (define-key evil-normal-state-map (kbd "M-j") 'evil-collection-unimpaired-move-text-down)
 

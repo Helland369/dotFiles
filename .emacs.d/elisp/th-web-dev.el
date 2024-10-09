@@ -27,7 +27,7 @@
 (setq web-mode-part-face 'font-lock-variable-name-face)
 
 ;; make web mode and js2 mode be friends
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-enable-auto-indentation nil)
 (setq web-mode-script-padding 4) ;; script indent ?
 
@@ -53,8 +53,8 @@
 (use-package js2-mode
   :defer t
   :ensure t)
-  (add-hook 'js-mode-hook 'js2-minor-mode) ;; makes js2-mode minor mode
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)) ;; Make js2 major mode
+  (add-hook 'js-mode-hook 'js2-minor-mode) ;; run minor mode with major mode
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)) ;; use js2 mode as major
   
 ;; uber web // swap between js2-mode and web mode
 (defun th-js2-web-mode ()
@@ -63,6 +63,7 @@
   (if (derived-mode-p 'js2-mode)
       (web-mode)
     (js2-mode)))
+
 
 
 

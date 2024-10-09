@@ -9,12 +9,14 @@
 (magit-auto-revert-mode t)
 
 ;; Company // auto compleate dropdown thing
-;; TODO; after: lsp-mode && (:map lsp-mode-map ("<tab>" . company-indent-or-complete-common))
 (use-package company
+  :after lsp-mode
   :hook (prog-mode . company-mode)
   :bind
   (:map company-active-map
         ("<tab>" . company-complete-selection))
+  (:map lsp-mode-map
+        ("<tab>" . company-indent-or-complete-common))
   :custom
   (company-minimum-prefix-length 1)
   (company-idle-delay 0.2))
@@ -43,13 +45,12 @@
 (define-auto-insert "\\.html$" "html-template.html")
 (setq auto-insert-query nil)
 
-;; ;; tree sitter
-;; (use-package tree-sitter
-;;   :hook ((js-mode . tree-sitter-mode)
-;;          (web-mode . tree-sitter-mode)))
 
-;; (use-package tree-sitter-langs
-;;   :after tree-sitter)
+;; Rainbow delimiter // colorful brackets
+(use-package rainbow-delimiters
+ :hook (prog-mode . rainbow-delimiters-mode))
+
+
 
 
 (provide 'th-dev)
