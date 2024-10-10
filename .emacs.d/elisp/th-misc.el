@@ -43,7 +43,7 @@
 (push '("\\`\\*hackernews .*\\*\\'" display-buffer-same-window)
       display-buffer-alist)
 
-;; Flyspell // spell check
+;; Flyspell // spell check // requires aspell // pacman -S aspell aspell-en aspell-nb
 
 ;; Change to English spell check
 (defun th-flyspell-english ()
@@ -63,7 +63,8 @@
 (add-hook 'org-mode-hook 'flyspell-mode)
 ;;(add-hook 'prog-mode-hook 'flyspell-mode)
 
-
+;; lorem ipsum // generate random text
+(use-package lorem-ipsum)
 
 (provide 'th-misc)
 ;;; th-misc.el ends here

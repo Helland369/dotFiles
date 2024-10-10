@@ -41,7 +41,16 @@
 
 (setq org-agenda-files '("~/org/todo.org"))
 
+(setq org-tag-alist '(
+                      ;; place
+                      ("home" . ?H)
+                      ("school" . ?S)
 
+                      ;; activities
+                      ("programming" . ?P)
+                      ("writing" . ?W)
+                      ("planning" . ?p)
+                      ("teamTask" . ?T)))
 
 
 

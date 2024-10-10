@@ -65,7 +65,20 @@
   "ib" 'ivy-switch-buffer
   "ii" 'counsel-imenu
   "li" 'lsp-ui-imenu
+  "ll" 'lorem-ipsum-insert-list
+  "lp" 'lorem-ipsum-insert-paragraphs
+  "ls" 'lorem-ipsum-insert-sentences
   "oa" 'org-agenda
+  "ot" 'org-set-tags-command
+  "pb" 'project-switch-to-buffer
+  "pB" 'project-list-buffers
+  "pd" 'project-dired
+  "pD" 'project-find-dir
+  "pf" 'project-find-file
+  "pK" 'project-kill-buffers
+  "pp" 'project-switch-project
+  "pr" 'project-find-regexp
+  "ps" 'project-search
   "ss" 'speedbar
   "se" 'th-flyspell-english
   "sn" 'th-flyspell-norwegian
@@ -86,8 +99,7 @@
   "ww" 'th-js2-web-mode
   "xd" 'xref-find-defenitions)
 
-;; "ft" 'treemacs
-;; "pf" 'projectile-find-file
+
 
 ;; move a whole text block // M+k // M+j
 (define-key evil-normal-state-map (kbd "M-k") 'evil-collection-unimpaired-move-text-up)

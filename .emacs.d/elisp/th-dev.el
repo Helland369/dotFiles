@@ -72,6 +72,8 @@
 (use-package rainbow-delimiters
  :hook (prog-mode . rainbow-delimiters-mode))
 
+;; Built in project package
+(require 'project)
 
 
 (provide 'th-dev)
