@@ -57,6 +57,7 @@
   "bb" 'counsel-bookmark
   "bi" 'ibuffer
   "cc" 'evilnc-comment-or-uncomment-lines
+  "ca" 'calc
   "dd" 'dired
   "ef" 'ediff-files
   "eF" 'ediff-files3

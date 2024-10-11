@@ -66,5 +66,7 @@
 ;; lorem ipsum // generate random text
 (use-package lorem-ipsum)
 
+
+
 (provide 'th-misc)
 ;;; th-misc.el ends here

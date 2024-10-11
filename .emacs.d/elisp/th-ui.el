@@ -39,7 +39,7 @@
   (dashboard-set-heading-icons t)
   (dashboard-set-file-icons t)
   (dashboard-startup-banner 'logo)
-  (dashboard-center-content t)
+  (dashboard-center-content nil)
   (dashboard-display-icons-p t)
   (dashboard-icon-type 'nerd-icons))
   ;;(setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
@@ -49,10 +49,8 @@
                       (projects . 5)
                       (agenda . 5)))
 
-;; Make dashboard the startup screen for emacs --daemon
-;; (add-hook 'after-init-hook (lambda ()
-;;                               (unless (dashboard-initial-buffer-p)
-;;                                 (dashboard-refresh-buffer))))
+(setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+(setq dashboard-agenda-tags-format 'ignore)
 
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 

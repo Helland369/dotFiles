@@ -75,7 +75,12 @@
   :ensure t)
   (add-hook 'js-mode-hook 'js2-minor-mode) ;; run minor mode with major mode
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)) ;; use js2 mode as major
-  
+
+;; Javascript indentation
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (setq js-indent-level 4)))
+
 ;; uber web // swap between js2-mode and web mode
 (defun th-js2-web-mode ()
   "Change between js2-mode and web-mpde."
@@ -91,6 +96,9 @@
   :hook (js2-mode . prettier-js-mode))
 
 (add-hook 'js2-mode-hook 'prettier-js-mode)
+
+;; prettier js indentation
+(setq prettier-js-args '("--tab-width" "4"))
 
 
 
