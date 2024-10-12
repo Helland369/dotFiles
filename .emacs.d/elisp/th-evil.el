@@ -56,11 +56,14 @@
 (evil-define-key nil th-leader-map
   "bb" 'counsel-bookmark
   "bi" 'ibuffer
-  "cc" 'evilnc-comment-or-uncomment-lines
   "ca" 'calc
+  "cc" 'evilnc-comment-or-uncomment-lines
   "dd" 'dired
   "ef" 'ediff-files
   "eF" 'ediff-files3
+  "er" 'eval-region
+  "es" 'eshell
+  "ev" 'eval-buffer
   "ff" 'counsel-find-file
   "gg" 'magit-status
   "ib" 'ivy-switch-buffer
@@ -70,6 +73,8 @@
   "lp" 'lorem-ipsum-insert-paragraphs
   "ls" 'lorem-ipsum-insert-sentences
   "oa" 'org-agenda
+  "oh" 'org-html-export-to-html
+  "om" 'org-md-export-to-markdown
   "ot" 'org-set-tags-command
   "pb" 'project-switch-to-buffer
   "pB" 'project-list-buffers
@@ -80,9 +85,10 @@
   "pp" 'project-switch-project
   "pr" 'project-find-regexp
   "ps" 'project-search
-  "ss" 'speedbar
+  "sb" 'speedbar
   "se" 'th-flyspell-english
   "sn" 'th-flyspell-norwegian
+  "ss" 'shell
   "t2" 'tab-new
   "t0" 'tab-close
   "tm" 'tab-move

@@ -40,13 +40,18 @@
   :config
   (setq web-mode-enable-auto-quoting nil)
   (setq web-mode-content-types-alist
-        '(("jsx" . "\\.js[x]?\\'"))))
+        '(("jsx" . "\\.js[x]?\\'")
+          ("javascript" . "\\.js[x]?\\'")))
 
-;; better colors for imbeded html?
+  ;; jsp engine for template literals
+  (add-to-list 'web-mode-engines-alist
+               '("jsp" . "\\.js[x]?\\'"))
+
+;; better colors
 (setq web-mode-enable-part-face t)
 (setq web-mode-part-face 'font-lock-variable-name-face)
 
-;; make web mode and js2 mode be friends
+;; make web mode start in a js buffer
 ;;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-enable-auto-indentation nil)
 (setq web-mode-script-padding 4) ;; script indent ?
@@ -60,7 +65,7 @@
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-auto-closing t) ;; auto close tags?
 ;; css colors
-(setq web-mode-enable-css-colorization t)
+(setq web-mode-enable-css-colorization t))
 
 
 ;; Company for web mode // aout compleate
@@ -83,10 +88,12 @@
 
 ;; uber web // swap between js2-mode and web mode
 (defun th-js2-web-mode ()
-  "Change between js2-mode and web-mpde."
+  "Change between js2-mode and web-mode with jsp engine."
   (interactive)
   (if (derived-mode-p 'js2-mode)
-      (web-mode)
+      (progn
+       (web-mode)
+       (setq web-mode-engine "jsp"))
     (js2-mode)))
 
 ;; js prettier // indent js / html
@@ -99,6 +106,50 @@
 
 ;; prettier js indentation
 (setq prettier-js-args '("--tab-width" "4"))
+
+
+
+
+
+
+(use-package web-mode
+  :ensure t
+  :mode
+  (("\\.phtml\\'" . web-mode)
+   ("\\.php\\'" . web-mode)
+   ("\\.tpl\\'" . web-mode)
+   ("\\.[agj]sp\\'" . web-mode)
+   ("\\.erb\\'" . web-mode)
+   ("\\.mustache\\'" . web-mode)
+   ("\\.djhtml\\'" . web-mode)
+   ("\\.js[x]\\'" . web-mode)
+   ("\\.html\\'" . web-mode))
+  :config
+  (setq web-mode-enable-auto-quoting nil)
+  (setq web-mode-content-types-alist
+        '(("jsx" . "\\.js[x]?\\'")
+          ("javascript" . "\\.js[x]?\\'")))
+  
+  ;; Set JSP engine for web-mode when editing js[x] files
+  (add-to-list 'web-mode-engines-alist
+               '("jsp" . "\\.js[x]?\\'"))
+  
+  ;; Rest of your web-mode configuration
+  (setq web-mode-enable-part-face t)
+  (setq web-mode-part-face 'font-lock-variable-name-face)
+  (setq web-mode-enable-auto-indentation nil)
+  (setq web-mode-script-padding 4) ;; script indent ?
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-closing t) ;; auto close tags?
+  (setq web-mode-enable-css-colorization t))
+
+
+
+
+
 
 
 
