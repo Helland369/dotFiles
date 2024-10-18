@@ -68,7 +68,7 @@
   "gg" 'magit-status
   "ib" 'ivy-switch-buffer
   "ii" 'counsel-imenu
-  "li" 'lsp-ui-imenu
+  ;;"li" 'lsp-ui-imenu
   "ll" 'lorem-ipsum-insert-list
   "lp" 'lorem-ipsum-insert-paragraphs
   "ls" 'lorem-ipsum-insert-sentences

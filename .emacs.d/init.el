@@ -59,10 +59,10 @@
 (require 'th-misc)
 (require 'th-files)
 (require 'th-dev)
-(require 'th-lsp)
+;;(require 'th-lsp)
 (require 'th-web-dev)
 (require 'th-org)
-
+(require 'th-eglot)
 
 
 (provide 'init.el)
