@@ -25,17 +25,17 @@
 ;;; Code:
 
 ;; Icrease gc treshold during starup
-(setq gc-cons-threshold most-positive-fixnum)
+;;(setq gc-cons-threshold most-positive-fixnum)
 
 ;; Temporarily disable file name handlers
-(defvar file-name-handler-alist-old file-name-handler-alist)
-(setq file-name-handler-alist nil)
+;;(defvar file-name-handler-alist-old file-name-handler-alist)
+;;(setq file-name-handler-alist nil)
 
 ;; Reset gc treshold and file name handler
-(add-hook 'emacs-starup-hook
-	  (lambda ()
-		 (setq gc-cons-threshold 100000000)
-		 (setq file-name-handler-alist file-name-handler-alist-old)))
+;;(add-hook 'emacs-starup-hook
+;;	  (lambda ()
+;;		 (setq gc-cons-threshold 100000000)
+;;		 (setq file-name-handler-alist file-name-handler-alist-old)))
 
 
 (set-face-attribute 'default nil
