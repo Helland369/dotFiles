@@ -59,13 +59,20 @@
   "ca" 'calc
   "cc" 'evilnc-comment-or-uncomment-lines
   "dd" 'dired
-  "ef" 'ediff-files
-  "eF" 'ediff-files3
+  "df" 'ediff-files
+  "dF" 'ediff-files3
+  "ef" 'eglot-format
+  "eF" 'eglot-format-buffer
   "er" 'eval-region
   "es" 'eshell
   "ev" 'eval-buffer
   "ff" 'counsel-find-file
   "gg" 'magit-status
+  "ha" 'hs-show-all
+  "hb" 'hs-hide-block
+  "hm" 'hs-minor-mode-menu
+  "ho" 'hs-show-block
+  "hs" 'hs-minor-mode
   "ib" 'ivy-switch-buffer
   "ii" 'counsel-imenu
   ;;"li" 'lsp-ui-imenu

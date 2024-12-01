@@ -72,6 +72,5 @@
 (setq auto-revert-use-notify t)
 
 
-
 (provide 'th-settings)
 ;;; th-settings.el ends here
