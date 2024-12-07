@@ -66,6 +66,15 @@
 ;; lorem ipsum // generate random text
 (use-package lorem-ipsum)
 
+(use-package pdf-tools
+  :ensure t
+  :config
+  (pdf-tools-install)
+  (setq pdf-view-continuous t)
+  (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1))))
+
+;;(setq pdf-view-midnight-colors '("#ffffff" . "#000000"))
+(add-to-list 'auto-mode-alist '("\\.dpf\\'" . pdf-view-mode))
 
 
 (provide 'th-misc)
