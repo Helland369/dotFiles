@@ -54,10 +54,10 @@
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; Flycheck // make red / grenn line
-;; (use-package flycheck
-;;   :diminish flycheck-mode
-;;   :init
-;;   (global-flycheck-mode))
+(use-package flycheck
+  :diminish flycheck-mode
+  :init
+  (global-flycheck-mode))
 
 ;; Which key // what key to press ?
 (use-package which-key

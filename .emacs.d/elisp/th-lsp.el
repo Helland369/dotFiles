@@ -30,9 +30,9 @@
   :init
   (setq lsp-keymap-prefix "C-c l")
   :hook
-  ;;(c-ts-mode . lsp-mode)
-  ;;(c++-ts-mode . lsp-mode)
-  (csharp-ts-mode . lsp-mode)
+  (c-mode . lsp-mode)
+  (c++-mode . lsp-mode)
+  (csharp-mode . lsp-mode)
   ;;(rust-ts-mode . lsp.mode)
   ;;(js-ts-mode . lsp-mode)
   ;;(js2-mode . lsp-mode)
@@ -41,7 +41,14 @@
   ;;(html-mode . lsp)
   ;;(css-ts-mode . lsp)
   (lsp-mode . lsp-enable-which-key-integration)
-  :commands lsp)
+  :commands lsp
+  :config
+  (setq lsp-inlay-hint-enable t)
+  (setq lsp-eldoc-enable-hover t)
+  (setq lsp-eldoc-render-all t)
+  (setq eldoc-echo-area-use-multiline-p t))
+  ;;(setq lsp-clients-clangd-executable "ccls"))
+
 
 ;; Help lsp mode behave?
 ;;(setq lsp-file-watch-threshold 5000)
@@ -56,13 +63,18 @@
   (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
   (setq lsp-ui-sideline-show-diagnostics nil)
   (setq lsp-ui-sideline-show-hover nil)
-  (setq lsp-ui-doc-show-with-cursor nil)
-  (setq lsp-ui-doc-show-with-mouse t)
-  (setq lsp-ui-doc-position 'bottom))
+  (setq lsp-ui-sideline-show-code-actions nil)
+  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-doc-show-with-cursor t)
+  (setq lsp-ui-doc-show-with-mouse nil)
+  (setq lsp-ui-doc-side 'right)
+  (setq lsp-ui-doc-position 'at-point))
 
-;; lsp ivy // does it even do some thing ?
 (use-package lsp-ivy)
 
+
+(use-package dap-mode
+  :defer t)
 
 
 (provide 'th-lsp)
