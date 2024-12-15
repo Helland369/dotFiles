@@ -69,9 +69,11 @@
 ;; Js2 mode so that we become firends wit javascript
 (use-package js2-mode
   :defer t
-  :ensure t)
+  :ensure t
+  :config
   (add-hook 'js-mode-hook 'js2-minor-mode) ;; run minor mode with major mode
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)) ;; use js2 mode as major
+  (setq js2-mode-show-strict-warnings nil))
 
 ;; Javascript indentation
 (add-hook 'js2-mode-hook

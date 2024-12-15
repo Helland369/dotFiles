@@ -78,6 +78,5 @@
 ;; Built in project package
 (require 'project)
 
-
 (provide 'th-dev)
 ;;; th-dev.el ends here
