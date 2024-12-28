@@ -67,6 +67,7 @@
   "er" 'eval-region
   "es" 'eshell
   "ev" 'eval-buffer
+  "fd" 'flymake-show-buffer-diagnostics
   "ff" 'counsel-find-file
   "gg" 'magit-status
   "ha" 'hs-show-all
