@@ -61,8 +61,9 @@
   "dd" 'dired
   "df" 'ediff-files
   "dF" 'ediff-files3
-  ;;"ef" 'eglot-format
-  ;;"eF" 'eglot-format-buffer
+  "ef" 'eglot-format
+  "eF" 'eglot-format-buffer
+  "ec" 'eglot-code-actions
   "er" 'eval-region
   "es" 'eshell
   "ev" 'eval-buffer
@@ -74,11 +75,11 @@
   "ho" 'hs-show-block
   "hs" 'hs-minor-mode
   "ib" 'ivy-switch-buffer
-  "ld" 'lsp-ui-doc-show
-  "lf" 'lsp-format-region
-  "lF" 'lsp-format-buffer
+  ;;"ld" 'lsp-ui-doc-show
+  ;;"lf" 'lsp-format-region
+  ;;"lF" 'lsp-format-buffer
   "ii" 'counsel-imenu
-  "lI" 'lsp-ui-imenu
+  ;;"lI" 'lsp-ui-imenu
   "ll" 'lorem-ipsum-insert-list
   "lp" 'lorem-ipsum-insert-paragraphs
   "lr" 'lsp-find-references
