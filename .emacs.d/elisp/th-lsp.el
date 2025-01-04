@@ -42,7 +42,13 @@
   (setq lsp-inlay-hint-enable t)
   (setq lsp-eldoc-enable-hover t)
   (setq lsp-eldoc-render-all t)
-  (setq eldoc-echo-area-use-multiline-p t))
+  (setq eldoc-echo-area-use-multiline-p t)
+  (setq lsp-lens-enable t)
+  (setq lsp-modeline-diagnostics-enable t)
+  (setq lsp-signature-auto-activate t)
+  (setq lsp-signature-render-documentation t)
+  (setq lsp-completion-show-detail t)
+  (setq lsp-completion-show-kind t))
   ;;(setq lsp-clients-clangd-executable "ccls"))
 
 

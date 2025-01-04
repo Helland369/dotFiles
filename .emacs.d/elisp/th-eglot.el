@@ -44,9 +44,9 @@
   (add-to-list 'eglot-server-programs
                '((js2-mode js-ts-mode) . ("/usr/bin/typescript-language-server" "--stdio"))) ;;; "--tsserver-inlay-hints"
   (add-to-list 'eglot-server-programs
-               '((c-ts-mode c++-ts-mode) . ("clangd" "--clang-tidy" "--header-insertion=never" "--inlay-hints=true")))
-  (add-to-list 'eglot-server-programs
-               '((c-ts-mode c-mode c++-ts-mode c++-mode) . ("ccls" "--init")))
+               '((c-ts-mode c++-ts-mode) . ("clangd" "--clang-tidy" "--header-insertion=iwyu" "--inlay-hints=true")))
+  ;;(add-to-list 'eglot-server-programs
+  ;;             '((c-ts-mode c-mode c++-ts-mode c++-mode) . ("ccls" "--init")))
   (add-to-list 'eglot-server-programs
                '((csharp-mode) . ("/usr/bin/OmniSharp" "-lsp"))) ;;; "--stdio" "--verbose"
   (add-hook 'eglot-managed-mode-hook 'flymake-mode)

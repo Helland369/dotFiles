@@ -75,6 +75,15 @@
 (use-package rainbow-delimiters
  :hook (prog-mode . rainbow-delimiters-mode))
 
+
+;; Yasnippet
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
+
+;; Pre made snippets
+(use-package yasnippet-snippets)
+
 ;; Built in project package
 (require 'project)
 
