@@ -11,8 +11,10 @@ autoload -Uz compinit
 compinit
 
 ## Chek the weather
-alias wttr="curl wttr.in"
-alias wttrv2="curl v2.wttr.in"
+
+wttr() { curl "wttr.in${1:-}" }
+wttrv2() { curl "v2.wttr.in${1:-}"}
+
 alias weather="curl wttr.in/ " # /CityName
 alias weatherv2="curl v2.wttr.in/ " # /CityName
 alias moon="curl wttr.in/moon"
