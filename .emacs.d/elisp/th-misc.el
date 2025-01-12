@@ -76,6 +76,17 @@
 ;;(setq pdf-view-midnight-colors '("#ffffff" . "#000000"))
 (add-to-list 'auto-mode-alist '("\\.dpf\\'" . pdf-view-mode))
 
+;; Discord status
+(use-package elcord
+  :ensure t
+  :config
+  (setq elcord-edit-icon "emacs"
+        elcord-application-id "383226320970055681" ;; Default id for Emacs in discord
+        elcord-display-buffer-details t ;; Show file mane in stats
+        elcord-show-time t) 
+  :hook (after-init . elcord-mode))
+(elcord-mode 1)
+
 
 (provide 'th-misc)
 ;;; th-misc.el ends here
