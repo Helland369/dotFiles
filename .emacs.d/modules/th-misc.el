@@ -37,34 +37,17 @@
   ([remap describe-variabel] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
 
-;; Hacker news
-(use-package hackernews)
-
-(push '("\\`\\*hackernews .*\\*\\'" display-buffer-same-window)
-      display-buffer-alist)
-
-;; Flyspell // spell check // requires aspell // pacman -S aspell aspell-en aspell-nb
-
-;; Change to English spell check
 (defun th-flyspell-english ()
   "Switch to English spell check."
   (interactive)
   (ispell-change-dictionary "english")
   (flyspell-buffer))
 
-;; Change to Norwegian spell check
 (defun th-flyspell-norwegian ()
   "Switch to Norwegian spell check."
   (interactive)
   (ispell-change-dictionary "norwegian")
   (flyspell-buffer))
-
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'org-mode-hook 'flyspell-mode)
-;;(add-hook 'prog-mode-hook 'flyspell-mode)
-
-;; lorem ipsum // generate random text
-(use-package lorem-ipsum)
 
 (use-package pdf-tools
   :ensure t
@@ -77,16 +60,15 @@
 (add-to-list 'auto-mode-alist '("\\.dpf\\'" . pdf-view-mode))
 
 ;; Discord status
-(use-package elcord
-  :ensure t
-  :config
-  (setq elcord-edit-icon "emacs"
-        elcord-application-id "383226320970055681" ;; Default id for Emacs in discord
-        elcord-display-buffer-details t ;; Show file mane in stats
-        elcord-show-time t) 
-  :hook (after-init . elcord-mode))
-(elcord-mode 1)
-
+;; (use-package elcord
+;;   :ensure t
+;;   :config
+;;   (setq elcord-edit-icon "emacs"
+;;         elcord-application-id "383226320970055681" ;; Default id for Emacs in discord
+;;         elcord-display-buffer-details t ;; Show file mane in stats
+;;         elcord-show-time t)
+;;   :hook (after-init . elcord-mode))
+;; (elcord-mode 1)
 
 (provide 'th-misc)
 ;;; th-misc.el ends here

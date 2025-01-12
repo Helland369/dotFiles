@@ -1,4 +1,4 @@
-;;; evil-th.el --- Evil mode // vim motion           -*- lexical-binding: t; -*-
+;;; th-evil.el --- Evil mode // vim motion           -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -82,13 +82,13 @@
   "lF" 'lsp-format-buffer
   "ii" 'counsel-imenu
   "lI" 'lsp-ui-imenu
-  ;;"ll" 'lorem-ipsum-insert-list
-  ;;"lp" 'lorem-ipsum-insert-paragraphs
-  "lpf" 'lsp-ui-peek-find-definitions
-  "lpi" 'lsp-ui-peek-find-implementation
-  "lpp" 'lsp-ui-peek-find-references
+  "ll" 'lorem-ipsum-insert-list
+  "lp" 'lorem-ipsum-insert-paragraphs
+  "ld" 'lsp-ui-peek-find-definitions
+  "li" 'lsp-ui-peek-find-implementation
+  "lp" 'lsp-ui-peek-find-references
   "lr" 'lsp-find-references
-  ;;"ls" 'lorem-ipsum-insert-sentences
+  "ls" 'lorem-ipsum-insert-sentences
   "oa" 'org-agenda
   "oh" 'org-html-export-to-html
   "om" 'org-md-export-to-markdown
@@ -120,7 +120,6 @@
   "ws" 'evil-window-split
   "wu" 'upcase-word
   "wv" 'evil-window-vsplit
-  "ww" 'th-js2-web-mode
   "xd" 'xref-find-defenitions)
 
 

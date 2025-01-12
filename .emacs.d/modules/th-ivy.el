@@ -1,4 +1,4 @@
-;;; ivy-th.el --- M-x menu // ivy / counsel / swiper          -*- lexical-binding: t; -*-
+;;; th-ivy.el --- M-x menu // ivy / counsel / swiper          -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 

@@ -1,4 +1,4 @@
-;;; settings-th.el --- Emacs settings                -*- lexical-binding: t; -*-
+;;; th-emacs.el --- Emacs settings                -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -24,22 +24,19 @@
 
 ;;; Code:
 
-;;; Code:
+;;(menu-bar-mode -1)
+;;(tool-bar-mode -1)
+;;(scroll-bar-mode -1)
 
-;; Line / colum numbers
-(global-display-line-numbers-mode t)
-(global-visual-line-mode 1)
-(setq column-number-mode t)
+;; line and column number
+;;(global-display-line-numbers-mode t)
+;;(global-visual-line-mode t)
+;;(setq column-number-mode t)
 
-;; Indent
+;; indentation
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-;;(setq-default indent-line-function 'c-indent-line)
-(setq indent-line-function 'insert-tab)
-;; c / cpp indent
-(setq-default c-basic-offser 4)
 
-;; Auto pari / close brackets etc
 (electric-pair-mode 1)
 
 ;; Save cursor possition
@@ -53,12 +50,9 @@
 ;; No more startup screen
 (setq inhibit-startup-screen t)
 
-;; Window tabs//
+;; tabs
 (setq tab-bar-show nil)
-(setq tab-bar-new-tab-choice "*dashboard*") ;;// need dahsboard
-
-;; Syntax highlight
-;;(setq font-lock-maximum-decoration t)
+;;(setq tab-bar-new-tab-choice "*dashboard*")
 
 ;; No bacup file
 (setq make-backup-files nil)
@@ -71,6 +65,5 @@
 (setq auto-revert-verbose nil) ;; optional
 (setq auto-revert-use-notify t)
 
-
-(provide 'th-settings)
-;;; th-settings.el ends here
+(provide 'th-emacs)
+;;; th-emacs.el ends here

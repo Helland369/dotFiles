@@ -54,10 +54,15 @@
 
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
-(use-package doom-themes)
-(setq doom-themes-enable-bold t
-      doom-themes-enable-italic t)
-(load-theme 'doom-monokai-spectrum t)
+;; (use-package doom-themes)
+;; (setq doom-themes-enable-bold t
+;;       doom-themes-enable-italic t)
+;; (load-theme 'doom-monokai-spectrum t)
+
+(use-package kanagawa-themes
+  :ensure t
+  :config
+  (load-theme 'kanagawa-wave t))
 
 (use-package doom-modeline
   :ensure t
@@ -67,5 +72,3 @@
 
 (provide 'th-ui)
 ;;; th-ui.el ends here
-
-

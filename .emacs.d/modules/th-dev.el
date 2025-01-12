@@ -1,4 +1,4 @@
-;;; dev-th.el --- General programming related packages  -*- lexical-binding: t; -*-
+;;; th-dev.el --- General programming related packages  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -24,34 +24,24 @@
 
 ;;; Code:
 
-;; Magit // the better way to get git
 (use-package magit)
+(magit-auto-revert-mode 1)
 
-;; Auto revert magit // update on disc change
-(magit-auto-revert-mode t)
-
-;; Company // auto compleate dropdown thing
 (use-package company
   :ensure t
-  ;;:after lsp-mode
   :hook (prog-mode . company-mode)
-   :bind
+  :bind
   (:map company-active-map
-         ("<tab>" . company-complete-selection))
-  ;; (:map lsp-mode-map
-  ;;       ("<tab>" . company-indent-or-complete-common))
+        ("<tab>" . company-complete-selection))
   :custom
   (company-minimum-prefix-length 1)
   (company-idle-delay 0.2)
+  (global-company-mode 1)
   :config
   (global-company-mode 1))
 
-;; Nicer looking company box
 (use-package company-box
   :hook (company-mode . company-box-mode))
-
-(use-package highlight-indent-guides)
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; Flycheck // make red / grenn line
 (use-package flycheck
@@ -64,17 +54,13 @@
   :config
   (which-key-mode))
 
-;; Templates
-(auto-insert-mode 1)
-(setq auto-insert-directory "~.emacs.d/template")
-(define-auto-insert "\\.html$" "html-template.html")
-(setq auto-insert-query nil)
-
+;; indent guide
+(use-package highlight-indent-guides)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; Rainbow delimiter // colorful brackets
 (use-package rainbow-delimiters
  :hook (prog-mode . rainbow-delimiters-mode))
-
 
 ;; Yasnippet
 (use-package yasnippet

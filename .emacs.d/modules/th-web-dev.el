@@ -1,4 +1,4 @@
-;;; dev-web-th.el --- Web development packages // web-mode js2-mode etc  -*- lexical-binding: t; -*-
+;;; th-web-dev.el --- Web development packages // web-mode js2-mode etc  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -100,17 +100,6 @@
 
 ;; prettier js indentation
 (setq prettier-js-args '("--tab-width" "4"))
-
-
-
-
-
-
-
-
-
-
-
 
 (provide 'th-web-dev)
 ;;; th-web-dev.el ends here

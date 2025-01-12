@@ -1,4 +1,4 @@
-;;; files-th.el --- File manage ment                 -*- lexical-binding: t; -*-
+;;; th-files.el --- File manage ment                 -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 

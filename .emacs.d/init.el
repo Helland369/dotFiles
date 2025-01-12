@@ -1,4 +1,4 @@
-;;; in.el --- init el                                -*- lexical-binding: t; -*-
+;;; init.el --- init el                                -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -24,59 +24,47 @@
 
 ;;; Code:
 
-;; Icrease gc treshold during starup
-;;(setq gc-cons-threshold most-positive-fixnum)
-
-;; Temporarily disable file name handlers
-;;(defvar file-name-handler-alist-old file-name-handler-alist)
-;;(setq file-name-handler-alist nil)
-
-;; Reset gc treshold and file name handler
-;;(add-hook 'emacs-starup-hook
-;;	  (lambda ()
-;;		 (setq gc-cons-threshold 100000000)
-;;		 (setq file-name-handler-alist file-name-handler-alist-old)))
-
-
-(set-face-attribute 'default nil
-		     :font "NotoMono Nerd Font"
-		     :height 120
-             :width 'expanded
-		     :weight 'medium)
-		     ;;:slant 'normal)
-
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
+;; line and column number
+(global-display-line-numbers-mode t)
+(global-visual-line-mode t)
+(setq column-number-mode t)
 
-(require 'th-settings)
-(require 'th-use-pkg)
-(require 'th-ui)
+(add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
+
+(require 'th-package)
+(require 'th-emacs)
+(require 'th-dev)
 (require 'th-evil)
 (require 'th-ivy)
-(require 'th-misc)
-(require 'th-files)
-(require 'th-dev)
 (require 'th-lsp)
+(require 'th-misc)
 (require 'th-web-dev)
+(require 'th-files)
 (require 'th-org)
+(require 'th-ui)
+
 ;;(require 'th-eglot)
 
-
-(provide 'init.el)
-;;; init.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(elcord emacs-discord-rpc yasnippet-snippets yasnippet flymake-eslint dap-mode eglot pdf-tools which-key web-mode rainbow-delimiters prettier-js org-modern nerd-icons-ivy-rich magit lsp-ui lsp-ivy js2-mode highlight-indent-guides helpful hackernews flycheck evil-nerd-commenter evil-collection doom-themes doom-modeline dashboard counsel company-web company-box)))
+   '(kanagawa-themes doom-modeline dashboard pdf-tools helpful prettier-js js2-mode company-web web-mode yasnippet-snippets yasnippet rainbow-delimiters highlight-indent-guides which-key flycheck dap-mode lsp-ivy lsp-ui lsp-mode nerd-icons-ivy-rich counsel ivy evil-nerd-commenter evil-collection evil company-box magit company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
+
+(provide 'init)
+;;; init.el ends here

@@ -1,4 +1,4 @@
-;;; pkg-use-th.el --- Use package                    -*- lexical-binding: t; -*-
+;;; th-package.el --- Use package                    -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 
@@ -24,11 +24,9 @@
 
 ;;; Code:
 
-;; use-package // elpa // melpa
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-;;(package-refresh-contents)
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
@@ -36,12 +34,8 @@
   (package-install 'use-package))
 
 (setq use-package-always-ensure t)
-(require 'use-package)
 
-;; Disable auto package refresh and load at startup
 (setq package-enable-at-startup nil)
 
-
-
-(provide 'th-use-pkg)
-;;; th-use-pkg.el ends here
+(provide 'th-package)
+;;; th-package.el ends here

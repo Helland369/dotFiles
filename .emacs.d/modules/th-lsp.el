@@ -1,4 +1,4 @@
-;;; lsp-th.el --- Lsp mode                           -*- lexical-binding: t; -*-
+;;; th-lsp.el --- Lsp mode                           -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024
 

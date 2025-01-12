@@ -1,9 +1,9 @@
 ;;; th-org.el --- org mode                           -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2024  
+;; Copyright (C) 2024
 
-;; Author:  <th>
-;; Keywords: 
+;; Author:  <Tomas Helland>
+;; Keywords: org-mode
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
