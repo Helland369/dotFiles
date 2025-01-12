@@ -82,13 +82,13 @@
   "lF" 'lsp-format-buffer
   "ii" 'counsel-imenu
   "lI" 'lsp-ui-imenu
-  "ll" 'lorem-ipsum-insert-list
-  "lp" 'lorem-ipsum-insert-paragraphs
+  ;;"ll" 'lorem-ipsum-insert-list
+  ;;"lp" 'lorem-ipsum-insert-paragraphs
   "ld" 'lsp-ui-peek-find-definitions
   "li" 'lsp-ui-peek-find-implementation
   "lp" 'lsp-ui-peek-find-references
   "lr" 'lsp-find-references
-  "ls" 'lorem-ipsum-insert-sentences
+  ;;"ls" 'lorem-ipsum-insert-sentences
   "oa" 'org-agenda
   "oh" 'org-html-export-to-html
   "om" 'org-md-export-to-markdown
