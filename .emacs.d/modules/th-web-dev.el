@@ -36,29 +36,13 @@
    ("\\.erb\\'" . web-mode)
    ("\\.mustache\\'" . web-mode)
    ("\\.djhtml\\'" . web-mode)
-   ("\\.js[x]\\'" . web-mode)
+   ;;("\\.js[x]\\'" . web-mode)
    ("\\.html\\'" . web-mode))
   :config
   (setq web-mode-enable-auto-quoting nil)
   (setq web-mode-content-types-alist
         '(("jsx" . "\\.js[x]?\\'")
-          ("javascript" . "\\.js[x]?\\'")))
-  
-  ;; Set JSP engine for web-mode when editing js[x] files
-  (add-to-list 'web-mode-engines-alist
-               '("jsp" . "\\.js[x]?\\'"))
-  
-  ;; Rest of your web-mode configuration
-  (setq web-mode-enable-part-face t)
-  (setq web-mode-part-face 'font-lock-variable-name-face)
-  (setq web-mode-enable-auto-indentation t)
-  (setq web-mode-script-padding 4) ;; script indent ?
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-enable-auto-pairing t)
-  (setq web-mode-enable-auto-closing t) ;; auto close tags?
-  (setq web-mode-enable-css-colorization t))
+          ("javascript" . "\\.js[x]?\\'"))))
 
 ;; Company for web mode // aout compleate
 (use-package company-web)
@@ -66,19 +50,22 @@
 (add-to-list 'company-backends 'company-web-jade)
 (add-to-list 'company-backends 'company-web-slim)
 
-;; Js2 mode so that we become firends wit javascript
+;; Js2 mode so that we become firends with javascript
 (use-package js2-mode
   :defer t
   :ensure t
+  :mode ("\\.js\\'" . js2-mode)
   :config
-  (add-hook 'js-mode-hook 'js2-minor-mode) ;; run minor mode with major mode
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)) ;; use js2 mode as major
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   (setq js2-mode-show-strict-warnings nil))
 
-;; Javascript indentation
-(add-hook 'js2-mode-hook
-          (lambda ()
-            (setq js-indent-level 4)))
+;; If js2-mode descides to be difficult..
+;;(setq-default major-mode 'js2-mode)
+
+(use-package typescript-mode
+  :ensure t
+  :mode ("\\.ts\\'" . typescript-mode)
+  :hook (typescript-mode . lsp))
 
 ;; uber web // swap between js2-mode and web mode
 (defun th-js2-web-mode ()

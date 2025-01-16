@@ -49,6 +49,9 @@
   :init
   (global-flycheck-mode))
 
+;; Fycheck eslint
+(setq flycheck-javascript-eslint-executable "/usr/bin/eslint")
+
 ;; Which key // what key to press ?
 (use-package which-key
   :config
