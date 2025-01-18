@@ -37,6 +37,10 @@
 (global-visual-line-mode t)
 (setq column-number-mode t)
 
+;; Man page path
+(setenv "MANPATH" (string-trim (shell-command-to-string "manpath")))
+
+;; To find lsp path
 (setenv "PATH" (concat "/usr/bin:" (getenv "PATH")))
 (setq exec-path (append exec-path '("/usr/bin")))
 
