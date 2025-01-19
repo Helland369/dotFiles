@@ -15,9 +15,12 @@ compinit
 wttr() { curl "wttr.in${1:-}" }
 wttrv2() { curl "v2.wttr.in${1:-}"}
 
-alias weather="curl wttr.in/ " # /CityName
-alias weatherv2="curl v2.wttr.in/ " # /CityName
+alias weather="curl wttr.in/" # << city name
+alias weatherv2="curl v2.wttr.in/" # << city name
 alias moon="curl wttr.in/moon"
+
+# Man pages
+export MANPATH=$(manpath)
 
 # Oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/omp.json)"

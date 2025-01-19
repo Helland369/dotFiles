@@ -35,3 +35,9 @@ fi
 if ! pgrep -x "easyeffects" > /dev/null; then
     easyeffects --gapplication-service &
 fi
+
+# Disable screen blanking and DPMS
+xset s off
+xset s noblank
+xset dpms 0 0 0
+xset -dpms

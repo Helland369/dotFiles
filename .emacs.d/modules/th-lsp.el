@@ -34,6 +34,7 @@
   (c++-mode . lsp-mode)
   (csharp-mode . lsp-mode)
   (js2-mode . lsp-mode)
+  (typescript-mode . lsp-mode)
   (web-mode . lsp-mode)
   (css-mode . lsp-mode)
   (lsp-mode . lsp-enable-which-key-integration)
