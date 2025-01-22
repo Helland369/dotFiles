@@ -34,6 +34,7 @@
 
 ;; line and column number
 (global-display-line-numbers-mode t)
+(setq display-line-numbers 'relative)
 (global-visual-line-mode t)
 (setq column-number-mode t)
 
