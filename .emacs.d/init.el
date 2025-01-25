@@ -33,8 +33,8 @@
 (scroll-bar-mode -1)
 
 ;; line and column number
+(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t)
-(setq display-line-numbers 'relative)
 (global-visual-line-mode t)
 (setq column-number-mode t)
 
