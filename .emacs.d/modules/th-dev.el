@@ -76,5 +76,10 @@
 ;; Built in project package
 (require 'project)
 
+;; ms-sql
+(setq sql-ms-program "sqlcmd")
+(setq sql-ms-options '("-S" "localhost" "-C"))
+(add-hook 'sql-mode-hook 'sql-highlight-ms-keywords)
+
 (provide 'th-dev)
 ;;; th-dev.el ends here
