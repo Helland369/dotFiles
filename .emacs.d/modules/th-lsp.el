@@ -24,6 +24,7 @@
 
 ;;; Code:
 
+
 ;; Lsp mode // make coding great. definitely no frustration
 (use-package lsp-mode
   :defer t
@@ -37,6 +38,7 @@
   (typescript-mode . lsp-mode)
   (web-mode . lsp-mode)
   (css-mode . lsp-mode)
+  (vue-mode . lsp)
   (lsp-mode . lsp-enable-which-key-integration)
   :commands lsp
   :config
@@ -49,9 +51,13 @@
   (setq lsp-signature-auto-activate t)
   (setq lsp-signature-render-documentation t)
   (setq lsp-completion-show-detail t)
-  (setq lsp-completion-show-kind t))
+  (setq lsp-completion-show-kind t)
+  (setq lsp-restart 'auto-restart)
+  (setq lsp-auto-import t)
+  (setq lsp-enable-file-watchers t)
+  (setq lsp-enable-symbol-highlighting t)
+  (setq lsp-volar-take-over-mode nil))
   ;;(setq lsp-clients-clangd-executable "ccls"))
-
 
 ;; Help lsp mode behave?
 ;;(setq lsp-file-watch-threshold 5000)

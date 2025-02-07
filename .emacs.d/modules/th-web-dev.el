@@ -67,6 +67,10 @@
   :mode ("\\.ts\\'" . typescript-mode)
   :hook (typescript-mode . lsp))
 
+(use-package vue-mode
+  :mode "\\.vue\\'"
+  :hook (vue-mode . prettier-js-mode))
+
 ;; uber web // swap between js2-mode and web mode
 (defun th-js2-web-mode ()
   "Change between js2-mode and web-mode with jsp engine."

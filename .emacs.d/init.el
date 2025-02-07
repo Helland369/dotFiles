@@ -67,7 +67,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(typescript-mode kanagawa-themes doom-modeline dashboard pdf-tools helpful prettier-js js2-mode company-web web-mode yasnippet-snippets yasnippet rainbow-delimiters highlight-indent-guides which-key flycheck dap-mode lsp-ivy lsp-ui lsp-mode nerd-icons-ivy-rich counsel ivy evil-nerd-commenter evil-collection evil company-box magit company)))
+   '(vue-mode typescript-mode kanagawa-themes doom-modeline dashboard pdf-tools helpful prettier-js js2-mode company-web web-mode yasnippet-snippets yasnippet rainbow-delimiters highlight-indent-guides which-key flycheck dap-mode lsp-ivy lsp-ui lsp-mode nerd-icons-ivy-rich counsel ivy evil-nerd-commenter evil-collection evil company-box magit company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
