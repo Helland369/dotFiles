@@ -10,14 +10,26 @@ zstyle :compinstall filename '/home/th/.zshrc'
 autoload -Uz compinit
 compinit
 
-## Chek the weather
+# onmisharp path
+export PATH="$HOME/.dotnet/tools:$PATH"
+
+# ls with colours
+alias ls="ls --color=auto"
+
+# Chek the weather
 
 wttr() { curl "wttr.in${1:-}" }
 wttrv2() { curl "v2.wttr.in${1:-}"}
 
-alias weather="curl wttr.in/" # << city name
-alias weatherv2="curl v2.wttr.in/" # << city name
+alias weather="curl wttr.in/Gressvik"
+alias weatherv2="curl v2.wttr.in/Gressvik"
 alias moon="curl wttr.in/moon"
+
+# nvim vim
+alias vim="nvim"
+
+# dot dot // go back one directory
+alias ..="cd .."
 
 # Man pages
 export MANPATH=$(manpath)

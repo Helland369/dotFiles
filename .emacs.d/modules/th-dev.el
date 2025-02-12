@@ -27,6 +27,13 @@
 (use-package magit)
 (magit-auto-revert-mode 1)
 
+(use-package forge)
+
+(use-package git-modes)
+
+(use-package magit-todos
+  :after magit)
+
 (use-package company
   :ensure t
   :hook (prog-mode . company-mode)
@@ -35,7 +42,7 @@
         ("<tab>" . company-complete-selection))
   :custom
   (company-minimum-prefix-length 1)
-  (company-idle-delay 0.2)
+  ;;(company-idle-delay 0.2)
   (global-company-mode 1)
   :config
   (global-company-mode 1))

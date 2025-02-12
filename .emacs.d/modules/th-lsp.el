@@ -34,8 +34,9 @@
   (c-mode . lsp-mode)
   (c++-mode . lsp-mode)
   (csharp-mode . lsp-mode)
-  (js2-mode . lsp-mode)
-  (typescript-mode . lsp-mode)
+  (js-mode . lsp-mode)
+  ;;(js2-mode . lsp-mode)
+  ;;(typescript-mode . lsp-mode)
   (web-mode . lsp-mode)
   (css-mode . lsp-mode)
   (vue-mode . lsp)
@@ -57,7 +58,6 @@
   (setq lsp-enable-file-watchers t)
   (setq lsp-enable-symbol-highlighting t)
   (setq lsp-volar-take-over-mode nil))
-  ;;(setq lsp-clients-clangd-executable "ccls"))
 
 ;; Help lsp mode behave?
 ;;(setq lsp-file-watch-threshold 5000)
@@ -70,7 +70,7 @@
   :config
   (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
   (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
-  (setq lsp-ui-sideline-show-diagnostics nil)
+  (setq lsp-ui-sideline-show-diagnostics t)
   (setq lsp-ui-sideline-show-hover nil)
   (setq lsp-ui-sideline-show-code-actions nil)
   (setq lsp-ui-doc-enable nil)
@@ -80,7 +80,6 @@
   (setq lsp-ui-doc-position 'at-point))
 
 (use-package lsp-ivy)
-
 
 (use-package dap-mode
   :defer t)

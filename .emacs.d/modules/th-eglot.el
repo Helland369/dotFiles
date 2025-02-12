@@ -42,15 +42,17 @@
   (setq eglot-extend-to-xref t)
   (setq eglot-verbose t)
   (add-to-list 'eglot-server-programs
-               '((js2-mode js-ts-mode) . ("/usr/bin/typescript-language-server" "--stdio"))) ;;; "--tsserver-inlay-hints"
+               '((js-mode js-ts-mode) . ("/usr/bin/typescript-language-server" "--stdio"))) ;;; "--tsserver-inlay-hints"
   (add-to-list 'eglot-server-programs
-               '((c-ts-mode c++-ts-mode) . ("clangd" "--clang-tidy" "--header-insertion=iwyu" "--inlay-hints=true")))
-  ;;(add-to-list 'eglot-server-programs
-  ;;             '((c-ts-mode c-mode c++-ts-mode c++-mode) . ("ccls" "--init")))
+               '((c-ts-mode c-mode c++-ts-mode c++-mode) . ("clangd" "--clang-tidy" "--header-insertion=iwyu" "--inlay-hints=true")))
+  ;; (add-to-list 'eglot-server-programs
+  ;;              '((c-ts-mode c-mode c++-ts-mode c++-mode) . ("ccls" "--init")))
   (add-to-list 'eglot-server-programs
                '((csharp-mode) . ("/usr/bin/OmniSharp" "-lsp"))) ;;; "--stdio" "--verbose"
-  (add-hook 'eglot-managed-mode-hook 'flymake-mode)
-  (add-hook 'eglot-managed-mode-hook 'eglot-inlay-hints-mode))
+  (add-to-list 'eglot-server-programs
+               '((vue-mode) . ("/usr/bin/vue-language-server")))
+  (add-hook 'eglot-managed-mode-hook 'flymake-mode))
+  ;;(add-hook 'eglot-managed-mode-hook 'eglot-inlay-hints-mode))
 
 
   ;; (((c-ts-mode c++-ts-mode) . eglot-ensure)
