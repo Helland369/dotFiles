@@ -13,6 +13,9 @@ compinit
 # onmisharp path
 export PATH="$HOME/.dotnet/tools:$PATH"
 
+# set edior
+export EDITOR="nvim"
+
 # ls with colours
 alias ls="ls --color=auto"
 
@@ -28,11 +31,24 @@ alias moon="curl wttr.in/moon"
 # nvim vim
 alias vim="nvim"
 
+# zellij
+alias z="zellij"
+
 # dot dot // go back one directory
 alias ..="cd .."
 
 # Man pages
-export MANPATH=$(manpath)
+#export MANPATH=$(manpath)
+
+# keep pathe afther wuiting yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/omp.json)"
