@@ -33,8 +33,26 @@ return {
         })
 		
 		require("lspconfig").omnisharp.setup{
-				cmd = { "OmniSharp" },
-				    on_attach = on_attach,
-		    }
-    end
+			cmd = { "/usr/bin/OmniSharp" },
+			
+			settings = {
+				FormattingOptions = {
+					EnableEditorConfigSupport = true,
+					OrganozeImports = nil,
+				},
+				MsBuild = {
+					LoadProjectsOnDemand = nil,
+				},
+				RoslynExtensionsOptions = {
+					EnableAnalyzerSupport = nil,
+					EnableImportCompletion = nil,
+					AnalyzeOpenDocumentsOnlu = nil,
+				},
+				Sdk = {
+					IncludePrereleases = true,
+				},
+			},
+			on_attach = on_attach,
+		}
+    end,
 }
