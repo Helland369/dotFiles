@@ -1,0 +1,45 @@
+# Define colors
+TIME_COLOR="%F{178}"   # Yellow (E5C07B)
+SHELL_COLOR="%F{167}"  # Red (E06C75)
+GIT_COLOR="%F{215}"    # Orange (F3C267)
+PATH_COLOR="%F{75}"    # Blue (61AFEF)
+RESET="%f"             # Reset color
+
+
+# Load Git info
+autoload -Uz vcs_info  
+
+# Enable Git and extra features
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' get-revision true  # Get commit hash
+zstyle ':vcs_info:git:*' formats '(%b@%c | %u%m)'  # Branch + commit hash
+zstyle ':vcs_info:git:*' actionformats '(%b|%a)'  # Rebase, cherry-pick, etc.
+
+# Define colors
+TIME_COLOR="%F{178}"   # Yellow (E5C07B)
+SHELL_COLOR="%F{167}"  # Red (E06C75)
+GIT_COLOR="%F{215}"    # Orange (F3C267)
+PATH_COLOR="%F{75}"    # Blue (61AFEF)
+RESET="%f"             # Reset color
+
+# Function to count modified files
+GIT_FILES_CHANGED() {
+    local changes
+    changes=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
+    [[ "$changes" -gt 0 ]] && echo "%F{yellow}${changes} files changed%f"
+}
+
+# Function to update the prompt dynamically
+update_prompt() {
+    vcs_info  # Update Git info
+    PS1="
+${TIME_COLOR}[%D{%H:%M}]${RESET} \
+${SHELL_COLOR}❯ ${RESET}%n@%m \
+${GIT_COLOR}${vcs_info_msg_0_}$(GIT_FILES_CHANGED)${RESET}
+${PATH_COLOR}%~${RESET}
+❯ "
+}
+
+# Ensure the prompt updates before each command
+precmd_functions+=(update_prompt)
