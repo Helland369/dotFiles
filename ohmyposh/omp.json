@@ -181,7 +181,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " \uea9c",
+          "template": " \udb81\ude27",
           "foreground": "p:bright-white",
           "background": "p:none",
           "type": "text",

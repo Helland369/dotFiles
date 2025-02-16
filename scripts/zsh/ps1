@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Define colors
 TIME_COLOR="%F{178}"   # Yellow (E5C07B)
 SHELL_COLOR="%F{167}"  # Red (E06C75)
