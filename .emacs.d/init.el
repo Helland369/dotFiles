@@ -42,7 +42,7 @@
 (setenv "MANPATH" (string-trim (shell-command-to-string "manpath")))
 
 ;; To find lsp path
-(setenv "PATH" (concat "/usr/bin:" (getenv "PATH")))
+(setenv "PATH" (concat "/usr/bin" (getenv "PATH")))
 (setq exec-path (append exec-path '("/usr/bin")))
 
 (add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
@@ -53,31 +53,31 @@
 (require 'th-evil)
 (require 'th-ivy)
 (require 'th-lsp)
-;;(require 'th-eglot)
 (require 'th-misc)
 (require 'th-web-dev)
 (require 'th-files)
 (require 'th-org)
 (require 'th-ui)
 
-;;(require 'th-eglot)
 
+
+(provide 'init)
+;;; init.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(magit-todos magit-todo git-modes forge vue-mode typescript-mode kanagawa-themes doom-modeline dashboard pdf-tools helpful prettier-js company-web web-mode yasnippet-snippets yasnippet rainbow-delimiters highlight-indent-guides which-key flycheck dap-mode lsp-ivy lsp-ui lsp-mode nerd-icons-ivy-rich counsel ivy evil-nerd-commenter evil-collection evil company-box magit company)))
+   '(company-box company-web counsel dap-mode dashboard doom-modeline
+                 evil-collection evil-nerd-commenter flycheck forge
+                 git-modes go-mode helpful highlight-indent-guides
+                 js2-mode kanagawa-themes lsp-ivy lsp-ui magit
+                 magit-todos nerd-icons-ivy-rich org-modern
+                 prettier-js rainbow-delimiters web-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-
-
-(provide 'init)
-;;; init.el ends here

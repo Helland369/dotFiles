@@ -37,8 +37,8 @@
    ("\\.erb\\'" . web-mode)
    ("\\.mustache\\'" . web-mode)
    ("\\.djhtml\\'" . web-mode)
-   ;;("\\.vue\\'" . web-mode)
-   ;;("\\.js[x]\\'" . web-mode)
+   ("\\.vue\\'" . web-mode)
+   ("\\.js[x]\\'" . web-mode)
    ("\\.html\\'" . web-mode))
   :config
   (setq web-mode-enable-auto-quoting nil)
@@ -47,46 +47,21 @@
           ("javascript" . "\\.js[x]?\\'")))
   (setq prettier-js-args '("--parser vue")))
 
-;; Company for web mode // aout compleate
-(use-package company-web)
-(add-to-list 'company-backends 'company-web-html)
-(add-to-list 'company-backends 'company-web-jade)
-(add-to-list 'company-backends 'company-web-slim)
+;;Company for web mode // aout compleate
+(use-package company-web
+  :config
+  (add-to-list 'company-backends 'company-web-html)
+  (add-to-list 'company-backends 'company-web-jade)
+  (add-to-list 'company-backends 'company-web-slim))
 
 ;; Js2 mode so that we become firends with javascript
-;; (use-package js2-mode
-;;   :defer t
-;;   :ensure t
-;;   :mode ("\\.js\\'" . js2-mode)
-;;   :config
-;;   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-;;   (setq js2-mode-show-strict-warnings nil))
-
-;; If js2-mode descides to be difficult..
-;;(setq-default major-mode 'js2-mode)
-
-(use-package typescript-mode
+(use-package js2-mode
+  :defer t
   :ensure t
-  :mode ("\\.ts\\'" . typescript-mode)
-  :hook (typescript-mode . lsp))
-
-(use-package vue-mode
-  :mode ("\\.vue\\'" . vue-mode)
-  :hook
-  (vue-mode . prettier-js-mode)
-  ;;(vue-mode . lsp)
+  :mode ("\\.js\\'" . js2-mode)
   :config
-  (setq prettier-js-args '("--parser vue")))
-
-;; uber web // swap between js2-mode and web mode
-(defun th-js2-web-mode ()
-  "Change between js2-mode and web-mode with jsp engine."
-  (interactive)
-  (if (derived-mode-p 'js2-mode)
-      (progn
-       (web-mode)
-       (setq web-mode-engine "jsp"))
-    (js2-mode)))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (setq js2-mode-show-strict-warnings nil))
 
 ;; js prettier // indent js / html
 (use-package prettier-js
@@ -98,22 +73,6 @@
 
 ;; prettier js indentation
 (setq prettier-js-args '("--tab-width" "4"))
-
-;; (use-package mmm-mode
-;;   :config
-;;   (setq mmm-global-mode 'maybe)
-;;   (mmm-add-mode-ext-class 'vue-mode nil 'vue-javascript)
-;;   (mmm-add-mode-ext-class 'vue-mode nil 'vue-css))
-
-;; (mmm-add-classes
-;;  '((vue-javascript
-;;     :submode js-mode
-;;     :front "<script[^>]*>"
-;;     :back "</script>")
-;;    (vue-css
-;;     :submode css-mode
-;;     :front "<style[^>]*>"
-;;     :back "</style>")))
 
 (provide 'th-web-dev)
 ;;; th-web-dev.el ends here

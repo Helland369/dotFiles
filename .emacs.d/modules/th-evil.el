@@ -24,20 +24,18 @@
 
 ;;; Code:
 
-;; Evil mode // supperior motion keys
+;; Vim motion
 (use-package evil
   :init
-  (setq evil-respect-visual-line-mode t)
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  (setq evil-vsplit-window-right t)
-  (setq evil-spilt-window-below t)
+  (setq evil-respect-visual-line-mode t
+        evil-want-integration t
+        evil-want-keybinding nil
+        evil-vsplit-window-right t
+        evil-spilt-window-below t)
   :config
   (evil-mode t)
-  (evil-set-initial-state 'dashboard 'normal))
-
-;; Adding to evil Evil
-(evil-set-undo-system 'undo-redo)
+  (evil-set-initial-state 'dashboard 'normal)
+  (evil-set-undo-system 'undo-redo))
 
 ;; Extending evil mode
 (use-package evil-collection
@@ -61,13 +59,8 @@
   "dd" 'dired
   "df" 'ediff-files
   "dF" 'ediff-files3
-  ;;"ef" 'eglot-format
-  ;;"eF" 'eglot-format-buffer
-  ;;"ec" 'eglot-code-actions
-  "er" 'eval-region
   "es" 'eshell
   "ev" 'eval-buffer
-  "fd" 'flymake-show-buffer-diagnostics
   "ff" 'counsel-find-file
   "gg" 'magit-status
   "ha" 'hs-show-all
@@ -77,64 +70,42 @@
   "hs" 'hs-minor-mode
   "ib" 'ivy-switch-buffer
   "lc" 'lsp-execute-code-action
-  "ld" 'lsp-ui-doc-show
+  "lD" 'lsp-ui-doc-show
   "lf" 'lsp-format-region
   "lF" 'lsp-format-buffer
   "ii" 'counsel-imenu
   "lI" 'lsp-ui-imenu
-  ;;"ll" 'lorem-ipsum-insert-list
-  ;;"lp" 'lorem-ipsum-insert-paragraphs
   "ld" 'lsp-ui-peek-find-definitions
   "li" 'lsp-ui-peek-find-implementation
-  "lp" 'lsp-ui-peek-find-references
-  "lr" 'lsp-find-references
-  ;;"ls" 'lorem-ipsum-insert-sentences
+  "lr" 'lsp-ui-peek-find-references
+  "lR" 'lsp-rename
   "oa" 'org-agenda
   "oh" 'org-html-export-to-html
   "om" 'org-md-export-to-markdown
   "ot" 'org-set-tags-command
-  "pb" 'project-switch-to-buffer
-  "pB" 'project-list-buffers
-  "pd" 'project-dired
-  "pD" 'project-find-dir
-  "pf" 'project-find-file
-  "pK" 'project-kill-buffers
-  "pp" 'project-switch-project
-  "pr" 'project-find-regexp
-  "ps" 'project-search
-  "sb" 'speedbar
-  "se" 'th-flyspell-english
-  "sn" 'th-flyspell-norwegian
   "ss" 'shell
-  "t2" 'tab-new
-  "t0" 'tab-close
-  "tm" 'tab-move
-  "tt" 'tab-bar-select-tab-by-name
-  "tu" 'tab-bar-undo-close-tab
   "w=" 'count-words
-  "wd" 'downcase-word
-  "wh" 'evil-window-left
-  "wj" 'evil-window-bottom
-  "wk" 'evil-window-top
-  "wl" 'evil-window-right
-  "ws" 'evil-window-split
-  "wu" 'upcase-word
-  "wv" 'evil-window-vsplit
   "xd" 'xref-find-defenitions)
 
 
-
-;; move a whole text block // M+k // M+j
-(define-key evil-normal-state-map (kbd "M-k") 'evil-collection-unimpaired-move-text-up)
-(define-key evil-normal-state-map (kbd "M-j") 'evil-collection-unimpaired-move-text-down)
-
-;; Scroll up wiht M+U
-(define-key evil-normal-state-map (kbd "M-u") 'evil-scroll-up)
-
-;; Evil nerd commenter // mass comment / uncomment
+;; comment blocks easyer 
 (use-package evil-nerd-commenter
   :bind ("M-/" . evilnc-comment-or-uncomment-lines))
 
+;; non leader keys
+
+;; scroll up
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+
+;;make C-u, C-b, C-f, C-d better
+(defun recenter-after-scroll (&rest _)
+  "Recenter screen after scrolling"
+  (evil-scroll-line-to-center nil))
+
+(advice-add 'evil-scroll-up :after #'recenter-after-scroll)
+(advice-add 'evil-scroll-down :after #'recenter-after-scroll)
+(advice-add 'evil-scroll-page-up :after #'recenter-after-scroll)
+(advice-add 'evil-scroll-page-down :after #'recenter-after-scroll)
 
 
 (provide 'th-evil)

@@ -39,7 +39,7 @@
 ;; org agenda
 (setq calendar-week-start-day 1) ;; start calendar on monday instead of sunday
 
-(setq org-agenda-files '("~/org/todo.org"))
+(setq org-agenda-files '("~/org/agenda/todo.org"))
 
 (setq org-tag-alist '(
                       ;; place

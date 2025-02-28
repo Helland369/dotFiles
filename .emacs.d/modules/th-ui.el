@@ -39,10 +39,10 @@
   (dashboard-set-heading-icons t)
   (dashboard-set-file-icons t)
   (dashboard-startup-banner 'logo)
-  (dashboard-center-content nil)
+  (dashboard-center-content t)
+  (dashboard-vertically-center-content nil)
   (dashboard-display-icons-p t)
   (dashboard-icon-type 'nerd-icons))
-  ;;(setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
 
   (setq dashboard-items '((recents . 5)
                       (bookmarks . 5)
@@ -54,11 +54,6 @@
 
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
-;; (use-package doom-themes)
-;; (setq doom-themes-enable-bold t
-;;       doom-themes-enable-italic t)
-;; (load-theme 'doom-monokai-spectrum t)
-
 (use-package kanagawa-themes
   :ensure t
   :config
@@ -67,7 +62,6 @@
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode t))
-
 
 
 (provide 'th-ui)

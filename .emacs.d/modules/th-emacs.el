@@ -60,7 +60,7 @@
 ;; Auto revert // update file on disc change
 (global-auto-revert-mode t)
 
-;; Dired updater in disc change
+;; Dired updater on disc change
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil) ;; optional
 (setq auto-revert-use-notify t)

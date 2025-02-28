@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-;; Ivy // M-x menu
+;; better M-x menu
 (use-package ivy
   :defer 0.1
   :diminish
@@ -32,9 +32,9 @@
   (("C-c C-r" . ivy-resume)
    ("C-x B" . ivy-switch-buffer-other-window))
    :custom
-   (setq ivy-count-format "(%d/%d) ")
-   (setq ivy-use-virtual-buffers t)
-   (setq enable-recursice-minibuffers t)
+   (setq ivy-count-format "(%d/%d) "
+         ivy-use-virtual-buffers t
+         enable-recursice-minibuffers t)
    :config
    (global-set-key (kbd "C-s") 'swiper-isearch)
    (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -44,26 +44,26 @@
    (global-set-key (kbd "C-c d") 'counsel-descbinds)
    (ivy-mode))
 
-;; Counsel the counsler
+;; find stuff
 (use-package counsel
   :after ivy
   :config (counsel-mode))
 
-;; Swiper the swiper
+;; find more stuff
 (use-package swiper
   :after ivy
   :bind
   (("C-s" . swiper)
-   ("C-r" . swiper)))
+   ("C-i" . swiper)))
 
-;; More icons
+;; ivy icons
 (use-package nerd-icons-ivy-rich
   :ensure t
   :init
   (nerd-icons-ivy-rich-mode 1)
   (ivy-rich-mode 1))
 
-;; Get rich quick scheme
+;; better looking ivy
 (use-package ivy-rich
   :after ivy
   :custom

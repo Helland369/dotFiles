@@ -49,26 +49,10 @@
   (ispell-change-dictionary "norwegian")
   (flyspell-buffer))
 
-(use-package pdf-tools
-  :ensure t
+;; Which key // what key to press ?
+(use-package which-key
   :config
-  (pdf-tools-install)
-  (setq pdf-view-continuous t)
-  (add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1))))
-
-;;(setq pdf-view-midnight-colors '("#ffffff" . "#000000"))
-(add-to-list 'auto-mode-alist '("\\.dpf\\'" . pdf-view-mode))
-
-;; Discord status
-;; (use-package elcord
-;;   :ensure t
-;;   :config
-;;   (setq elcord-edit-icon "emacs"
-;;         elcord-application-id "383226320970055681" ;; Default id for Emacs in discord
-;;         elcord-display-buffer-details t ;; Show file mane in stats
-;;         elcord-show-time t)
-;;   :hook (after-init . elcord-mode))
-;; (elcord-mode 1)
+  (which-key-mode))
 
 (provide 'th-misc)
 ;;; th-misc.el ends here

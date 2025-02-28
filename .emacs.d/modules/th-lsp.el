@@ -25,62 +25,65 @@
 ;;; Code:
 
 
-;; Lsp mode // make coding great. definitely no frustration
+;; Get some help while coding
 (use-package lsp-mode
-  :defer t
   :init
   (setq lsp-keymap-prefix "C-c l")
   :hook
-  (c-mode . lsp-mode)
-  (c++-mode . lsp-mode)
+  (c-mode      . lsp-mode)
+  (c++-mode    . lsp-mode)
   (csharp-mode . lsp-mode)
-  (js-mode . lsp-mode)
-  ;;(js2-mode . lsp-mode)
-  ;;(typescript-mode . lsp-mode)
-  (web-mode . lsp-mode)
-  (css-mode . lsp-mode)
-  (vue-mode . lsp)
-  (lsp-mode . lsp-enable-which-key-integration)
+  (rust-mode   . lsp-mode)
+  (js2-mode    . lsp-mode)
+  (web-mode    . lsp-mode)
+  (css-mode    . lsp-mode)
+  (vue-mode    . lsp-mode)
+  (go-mode     . lsp-mode)
+  (lsp-mode    . lsp-enable-which-key-integration)
   :commands lsp
   :config
-  (setq lsp-inlay-hint-enable t)
-  (setq lsp-eldoc-enable-hover t)
-  (setq lsp-eldoc-render-all t)
-  (setq eldoc-echo-area-use-multiline-p t)
-  (setq lsp-lens-enable t)
-  (setq lsp-modeline-diagnostics-enable t)
-  (setq lsp-signature-auto-activate t)
-  (setq lsp-signature-render-documentation t)
-  (setq lsp-completion-show-detail t)
-  (setq lsp-completion-show-kind t)
-  (setq lsp-restart 'auto-restart)
-  (setq lsp-auto-import t)
-  (setq lsp-enable-file-watchers t)
-  (setq lsp-enable-symbol-highlighting t)
-  (setq lsp-volar-take-over-mode nil))
+  (setq lsp-inlay-hint-enable t
+        lsp-eldoc-enable-hover t
+        lsp-eldoc-render-all t
+        eldoc-echo-area-use-multiline-p t
+        lsp-lens-enable t
+        lsp-modeline-diagnostics-enable t
+        lsp-signature-auto-activate t
+        lsp-signature-render-documentation t
+        lsp-completion-show-detail t
+        lsp-completion-show-kind t
+        lsp-restart 'auto-restart
+        lsp-auto-import t
+        lsp-enable-file-watchers t
+        lsp-enable-symbol-highlighting t
+        lsp-volar-take-over-mode nil))
 
-;; Help lsp mode behave?
-;;(setq lsp-file-watch-threshold 5000)
-
-;; Lsp ui // see you frustration
+;; visual aid while coding
 (use-package lsp-ui
   :after lsp-mode
   :hook (lsp-mode . lsp-ui-mode)
-  :commands lsp-ui-mode
   :config
-  (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
-  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
-  (setq lsp-ui-sideline-show-diagnostics t)
-  (setq lsp-ui-sideline-show-hover nil)
-  (setq lsp-ui-sideline-show-code-actions nil)
-  (setq lsp-ui-doc-enable nil)
-  (setq lsp-ui-doc-show-with-cursor t)
-  (setq lsp-ui-doc-show-with-mouse nil)
-  (setq lsp-ui-doc-side 'right)
-  (setq lsp-ui-doc-position 'at-point))
+  (with-eval-after-load 'lsp-ui
+    (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
+    (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references))
+  (setq lsp-ui-sideline-enable nil
+        lsp-ui-sideline--margin 0
+        lsp-ui-sideline-show-diagnostics nil
+        lsp-ui-sideline-show-hover nil
+        lsp-ui-sideline-show-code-actions nil
+        lsp-ui-sideline-update-mode 'line
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-sideline-diagnostic-max-lines 3
+        lsp-ui-sideline-diagnostic-max-line-length 60
+        lsp-ui-doc-enable nil
+        lsp-ui-doc-show-with-cursor t
+        lsp-ui-doc-show-with-mouse nil
+        lsp-ui-doc-side 'right
+        lsp-ui-doc-position 'at-point))
 
 (use-package lsp-ivy)
 
+;; debug
 (use-package dap-mode
   :defer t)
 
