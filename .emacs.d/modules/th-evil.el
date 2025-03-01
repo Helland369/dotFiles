@@ -109,5 +109,9 @@
 (advice-add 'evil-scroll-page-up :after #'recenter-after-scroll)
 (advice-add 'evil-scroll-page-down :after #'recenter-after-scroll)
 
+(evil-global-set-key 'normal (kbd "g b") 'evil-next-buffer)
+(evil-global-set-key 'normal (kbd "g B") 'evil-prev-buffer)
+
+
 (provide 'th-evil)
 ;;; th-evil.el ends here

@@ -65,5 +65,10 @@
 (setq auto-revert-verbose nil) ;; optional
 (setq auto-revert-use-notify t)
 
+;; non evil keybindings
+
+(global-set-key ["C-+"] 'text-scale-increase)
+(global-set-key ["C--"] 'text-scale-decrease)
+
 (provide 'th-emacs)
 ;;; th-emacs.el ends here
