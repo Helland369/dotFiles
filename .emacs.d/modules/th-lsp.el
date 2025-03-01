@@ -31,7 +31,9 @@
   (setq lsp-keymap-prefix "C-c l")
   :hook
   (c-mode      . lsp-mode)
+  (c-ts-mode   . lsp-mode)
   (c++-mode    . lsp-mode)
+  (c++-ts-mode . lsp-mode)
   (csharp-mode . lsp-mode)
   (rust-mode   . lsp-mode)
   (js2-mode    . lsp-mode)
@@ -39,6 +41,7 @@
   (css-mode    . lsp-mode)
   (vue-mode    . lsp-mode)
   (go-mode     . lsp-mode)
+  (go-ts-mode  . lsp-mode)
   (lsp-mode    . lsp-enable-which-key-integration)
   :commands lsp
   :config

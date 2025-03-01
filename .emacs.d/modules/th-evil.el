@@ -62,6 +62,8 @@
   "es" 'eshell
   "ev" 'eval-buffer
   "ff" 'counsel-find-file
+  "fg" 'counsel-rg
+  "fz" 'counsel-fzf
   "gg" 'magit-status
   "ha" 'hs-show-all
   "hb" 'hs-hide-block
@@ -106,7 +108,6 @@
 (advice-add 'evil-scroll-down :after #'recenter-after-scroll)
 (advice-add 'evil-scroll-page-up :after #'recenter-after-scroll)
 (advice-add 'evil-scroll-page-down :after #'recenter-after-scroll)
-
 
 (provide 'th-evil)
 ;;; th-evil.el ends here
