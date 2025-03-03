@@ -40,7 +40,7 @@
   (web-mode    . lsp-mode)
   (css-mode    . lsp-mode)
   (vue-mode    . lsp-mode)
-  (go-mode     . lsp-mode)
+  ;;(go-mode     . lsp-mode)
   (go-ts-mode  . lsp-mode)
   (lsp-mode    . lsp-enable-which-key-integration)
   :commands lsp

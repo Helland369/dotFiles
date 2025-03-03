@@ -53,8 +53,8 @@
 (use-package swiper
   :after ivy
   :bind
-  (("C-s" . swiper)
-   ("C-i" . swiper)))
+  (("M-s" . swiper)
+   ("M-i" . swiper)))
 
 ;; ivy icons
 (use-package nerd-icons-ivy-rich

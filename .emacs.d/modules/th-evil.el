@@ -90,7 +90,7 @@
   "xd" 'xref-find-defenitions)
 
 
-;; comment blocks easyer 
+;; comment blocks easyer
 (use-package evil-nerd-commenter
   :bind ("M-/" . evilnc-comment-or-uncomment-lines))
 
@@ -101,7 +101,7 @@
 
 ;;make C-u, C-b, C-f, C-d better
 (defun recenter-after-scroll (&rest _)
-  "Recenter screen after scrolling"
+  "Recenter screen after scrolling."
   (evil-scroll-line-to-center nil))
 
 (advice-add 'evil-scroll-up :after #'recenter-after-scroll)

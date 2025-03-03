@@ -31,8 +31,9 @@ alias moon="curl wttr.in/moon"
 # nvim vim
 alias vim="nvim"
 
-# zellij
-#alias z="zellij"
+# emacs
+alias em="emacsclient -tty"
+alias ema="emacsclient --create-frame"
 
 # dot dot // go back one directory
 alias ..="cd .."

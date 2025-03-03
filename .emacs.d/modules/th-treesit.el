@@ -16,6 +16,7 @@
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
+
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
@@ -30,7 +31,8 @@
         (json "https://github.com/tree-sitter/tree-sitter-json")
         (make "https://github.com/alemuller/tree-sitter-make")
         (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
-        (c "https://github.com/tree-sitter/tree-sitter-c")))
+        (c "https://github.com/tree-sitter/tree-sitter-c")
+        (gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
 
 (setq treesit-font-lock-level 4)
 
@@ -46,6 +48,11 @@
 
 (use-package json-ts-mode
   :mode ("\\.json\\'" . json-ts-mode))
+
+(use-package go-ts-mode
+  :mode ("\\.go\\'" . go-ts-mode)
+  :config
+  (setq treesit-indent-function 4))
 
 (provide 'th-treesit)
 ;;; th-treesit.el ends here
