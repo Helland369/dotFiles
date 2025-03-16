@@ -60,4 +60,10 @@ source <(fzf --zsh)
 
 # Set up zoxide completion
 eval "$(zoxide init zsh)"
+
+# plugins
+
+source /home/th/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  			#https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 						#https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+
 # End of lines added by compinstall
