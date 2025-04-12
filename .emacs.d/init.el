@@ -72,10 +72,10 @@
    '(company-box company-web counsel cpp-ts-mode dap-mode dashboard
                  doom-modeline evil-collection evil-nerd-commenter
                  flycheck forge git-modes go-mode helpful
-                 highlight-indent-guides js2-mode kanagawa-themes
-                 lsp-ivy lsp-ui magit magit-todos nerd-icons-ivy-rich
-                 org-modern prettier-js rainbow-delimiters web-mode
-                 yasnippet)))
+                 highlight-indent-guides ivy-posframe js2-mode
+                 kanagawa-themes lsp-ivy lsp-ui magit magit-todos
+                 nerd-icons-ivy-rich org-modern prettier-js
+                 rainbow-delimiters web-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

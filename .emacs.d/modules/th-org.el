@@ -52,6 +52,9 @@
                       ("planning" . ?p)
                       ("teamTask" . ?T)))
 
+;; size of latex in org mode
+(with-eval-after-load 'org
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2)))
 
 
 (provide 'th-org)

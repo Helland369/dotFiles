@@ -73,6 +73,10 @@
   :config
   (ivy-rich-mode 1))
 
+;; ivy in the midle of the screen
+(use-package ivy-posframe
+  :config
+  (ivy-posframe-mode 1))
 
 
 (provide 'th-ivy)

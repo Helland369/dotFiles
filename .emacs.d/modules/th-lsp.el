@@ -46,9 +46,9 @@
   :commands lsp
   :config
   (setq lsp-inlay-hint-enable t
-        lsp-eldoc-enable-hover t
-        lsp-eldoc-render-all t
-        eldoc-echo-area-use-multiline-p t
+        lsp-eldoc-enable-hover nil
+        lsp-eldoc-render-all nil
+        eldoc-echo-area-use-multiline-p nil
         lsp-lens-enable t
         lsp-modeline-diagnostics-enable t
         lsp-signature-auto-activate t
