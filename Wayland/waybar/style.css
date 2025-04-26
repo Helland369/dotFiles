@@ -44,7 +44,11 @@ window#waybar{
     background-color: #72A7BC;
 }
 
-#pulseaudio {
+#wireplumber {
     background-color: #2D4F67;
     
+}
+
+#wireplumber.muted {
+    background-color: #c34043;
 }
