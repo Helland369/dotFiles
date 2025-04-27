@@ -1,3 +1,8 @@
+* {
+    font-family: iosevka;
+    font-size: 13px;
+}
+
 window#waybar{
     color: #c8c093;
     background-color:#16161D;
