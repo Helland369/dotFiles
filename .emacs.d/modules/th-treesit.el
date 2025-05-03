@@ -54,5 +54,6 @@
   :config
   (setq treesit-indent-function 4))
 
+
 (provide 'th-treesit)
 ;;; th-treesit.el ends here

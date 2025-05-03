@@ -24,10 +24,27 @@
 
 ;;; Code:
 
+;; font
 (set-face-attribute 'default nil
                     :family "Iosevka"
                     :height 120)
 
+;; tty clipboard // depends on; wl-clipboard
+(unless (display-graphic-p)
+  (defun wl-copy (text)
+    (let ((process-connection-type))
+      (let ((proc (start-process "wl-copy" "*Messages*" "wl-copy")))
+        (process-send-string proc text)
+        (process-send-eof proc))))
+  (defun wl-paste ()
+    (if (executable-find "wl-paste")
+        (shell-command-to-string "wl-paste")
+      (error "wl-paste not found")))
+
+  (setq interprogram-cut-function 'wl-copy)
+  (setq interprogram-paste-function 'wl-paste))
+
+;; emacs ui
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -75,7 +92,7 @@
                  highlight-indent-guides ivy-posframe js2-mode
                  kanagawa-themes lsp-ivy lsp-ui magit magit-todos
                  nerd-icons-ivy-rich org-modern prettier-js
-                 rainbow-delimiters web-mode yasnippet)))
+                 python-ts-mode rainbow-delimiters web-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
