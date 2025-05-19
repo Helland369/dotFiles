@@ -37,9 +37,11 @@
 (setq treesit-font-lock-level 4)
 
 (setq major-mode-remap-alist
-      '((c++-mode . c++-ts-mode)
-        (c-mode . c-ts-mode)
-        (go-mode . go-ts-mode)))
+      '((c++-mode  . c++-ts-mode)
+        (c-mode    . c-ts-mode)
+        (go-mode   . go-ts-mode)
+        (html-mode . html-ts-mode)
+        (css-mode  . css-ts-mode)))
 
 ;; TODO may need to edit
 (use-package cmake-ts-mode
@@ -52,8 +54,15 @@
 (use-package go-ts-mode
   :mode ("\\.go\\'" . go-ts-mode)
   :config
-  (setq treesit-indent-function 4))
+  (setq treesit-indent-function 2))
 
+(use-package html-ts-mode
+  :ensure nil
+  :mode ("\\.html\\'" . html-ts-mode))
+
+(use-package css-ts-mode
+  :ensure nil
+  :mode ("\\.css\\'" . css-ts-mode))
 
 (provide 'th-treesit)
 ;;; th-treesit.el ends here

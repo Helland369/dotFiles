@@ -61,7 +61,8 @@
   :mode ("\\.js\\'" . js2-mode)
   :config
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-  (setq js2-mode-show-strict-warnings nil))
+  (setq js2-mode-show-strict-warnings nil
+        js2-basic-offset 2))
 
 ;; js prettier // indent js / html
 (use-package prettier-js
@@ -72,7 +73,7 @@
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 
 ;; prettier js indentation
-(setq prettier-js-args '("--tab-width" "4"))
+(setq prettier-js-args '("--tab-width" "2"))
 
 (provide 'th-web-dev)
 ;;; th-web-dev.el ends here

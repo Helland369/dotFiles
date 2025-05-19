@@ -87,9 +87,9 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(company-box company-web counsel cpp-ts-mode dap-mode dashboard
-                 doom-modeline evil-collection evil-nerd-commenter
-                 flycheck forge git-modes go-mode helpful
-                 highlight-indent-guides ivy-posframe js2-mode
+                 diff-hl doom-modeline evil-collection
+                 evil-nerd-commenter flycheck git-modes go-mode
+                 helpful highlight-indent-guides js2-mode
                  kanagawa-themes lsp-ivy lsp-ui magit magit-todos
                  nerd-icons-ivy-rich org-modern prettier-js
                  python-ts-mode rainbow-delimiters web-mode yasnippet)))

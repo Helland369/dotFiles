@@ -29,7 +29,7 @@
 (magit-auto-revert-mode 1)
 
 ;; using github in emacs
-(use-package forge)
+;;(use-package forge)
 
 ;; editing .gitignore files and other files related to git
 (use-package git-modes)
@@ -37,6 +37,11 @@
 ;; highlight TODO comments in magit
 (use-package magit-todos
   :after magit)
+
+;; show diff in the side line
+(use-package diff-hl
+  :config
+  (global-diff-hl-mode))
 
 ;; autocompleation
 (use-package company
