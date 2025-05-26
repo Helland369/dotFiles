@@ -26,7 +26,7 @@
 
 ;; font
 (set-face-attribute 'default nil
-                    :family "Iosevka"
+                    :family "Iosevka Nerd Font"
                     :height 120)
 
 ;; tty clipboard // depends on; wl-clipboard

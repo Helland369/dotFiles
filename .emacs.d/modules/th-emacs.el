@@ -60,13 +60,29 @@
 ;; Auto revert // update file on disc change
 (global-auto-revert-mode t)
 
+(defun th-setup-prettify-symbols ()
+  (setq prettify-symbols-alist
+        '(("!=" . ?≠)
+          ("==" . ?≡)
+          ("=>" . ?󰘧)
+          ("<=" . ?≤)
+          (">=" . ?≥)
+          ("->" . ?→)
+          ("<-" . ?←)
+          ("lambda" . ?󰘧)))
+  (prettify-symbols-mode 1))
+
+(add-hook 'prog-mode-hook #'th-setup-prettify-symbols)
+
 ;; Dired updater on disc change
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil) ;; optional
 (setq auto-revert-use-notify t)
 
-;; non evil keybindings
+;; prettify symbols
+(global-prettify-symbols-mode 1)
 
+;; non evil keybindings
 (global-set-key ["C-+"] 'text-scale-increase)
 (global-set-key ["C--"] 'text-scale-decrease)
 
