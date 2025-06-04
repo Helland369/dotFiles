@@ -91,8 +91,9 @@
                  evil-nerd-commenter flycheck git-modes go-mode
                  helpful highlight-indent-guides js2-mode
                  kanagawa-themes lsp-ivy lsp-ui magit magit-todos
-                 nerd-icons-ivy-rich org-modern prettier-js
-                 python-ts-mode rainbow-delimiters web-mode yasnippet)))
+                 nerd-icons-ivy-rich org-modern posframe prettier-js
+                 python-ts-mode rainbow-delimiters slime slime-company
+                 web-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

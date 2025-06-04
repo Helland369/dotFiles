@@ -13,11 +13,15 @@ compinit
 # onmisharp path
 export PATH="$HOME/.dotnet/tools:$PATH"
 
+# alive lsp path
+export PATH="$HOME/bin:$PATH"
+
 # set edior
 export EDITOR="nvim"
 
 # ls with colours
-alias ls="ls --color=auto"
+alias ls="ls --colo
+r=auto"
 
 # Chek the weather
 
@@ -32,8 +36,9 @@ alias moon="curl wttr.in/moon"
 alias vim="nvim"
 
 # emacs
-alias em="emacsclient -tty"
+alias emc="emacsclient -nw"
 alias ema="emacsclient --create-frame"
+alias em="emacs -nw"
 
 # dot dot // go back one directory
 alias ..="cd .."
@@ -67,6 +72,6 @@ source /home/th/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  			#https:/
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 						#https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 
 ## autosuggestion config
-bindkey "^ " autosuggest-accept
+bindkey "^[^M" autosuggest-accept
 
 # End of lines added by compinstall

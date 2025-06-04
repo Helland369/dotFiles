@@ -92,5 +92,15 @@
 
 (use-package go-mode)
 
+(use-package slime
+  :ensure t
+  :init
+  (setq inferior-lisp-program "sbcl")
+  :config
+  (slime-setup '(slime-fancy slime-company)))
+
+(use-package slime-company
+  :ensure t)
+
 (provide 'th-dev)
 ;;; th-dev.el ends here

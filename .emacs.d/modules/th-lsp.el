@@ -45,6 +45,13 @@
   (lsp-mode    . lsp-enable-which-key-integration)
   :commands lsp
   :config
+  ;; (with-eval-after-load 'lsp-mode
+  ;;   (add-to-list 'lsp-language-id-configuration '(lisp-mode . "commonlisp")))
+  ;; (lsp-register-client
+  ;;  (make-lsp-client
+  ;;   :new-connection (lsp-stdio-connection '("alive"))
+  ;;   :major-modes '(lisp-mode)
+  ;;   :server-id 'alive-lsp))
   (setq lsp-inlay-hint-enable t
         lsp-eldoc-enable-hover nil
         lsp-eldoc-render-all nil
