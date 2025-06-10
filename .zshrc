@@ -20,8 +20,7 @@ export PATH="$HOME/bin:$PATH"
 export EDITOR="nvim"
 
 # ls with colours
-alias ls="ls --colo
-r=auto"
+alias ls="ls --color=auto"
 
 # Chek the weather
 
@@ -68,7 +67,9 @@ eval "$(zoxide init zsh)"
 
 # plugins
 
-source /home/th/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  			#https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+
+#source /home/th/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  			#https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 						#https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 
 ## autosuggestion config
