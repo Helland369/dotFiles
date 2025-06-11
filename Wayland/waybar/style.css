@@ -1,6 +1,8 @@
 * {
     font-family: iosevka;
     font-size: 13px;
+    padding: 0;
+    margin: 0;
 }
 
 window#waybar{
@@ -41,9 +43,9 @@ window#waybar{
     background-color: #957FB8;
 }
 
-#clock {
-    background-color: #6a9589;
-}
+/* #clock { */
+/*     background-color: #6a9589; */
+/* } */
 
 #tray {
     background-color: #72A7BC;
