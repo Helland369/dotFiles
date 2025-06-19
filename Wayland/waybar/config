@@ -74,8 +74,8 @@
     "clock": {
         "timezone": "Norway/Oslo",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%H:%M %Y-%m-%d} ",
-        //"format-alt": " {:%Y-%m-%d}   "
+        "format": " {:%H:%M | %d-%m-%y} ",
+        //"format-alt": " {:%d-%m-%y}   "
     },
     "cpu": {
         "interval": 10,
