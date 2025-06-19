@@ -74,5 +74,3 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 						#https://github.
 
 ## autosuggestion config
 bindkey "^[^M" autosuggest-accept
-
-# End of lines added by compinstall
