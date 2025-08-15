@@ -90,7 +90,8 @@
 (setq sql-ms-options '("-S" "localhost" "-C"))
 (add-hook 'sql-mode-hook 'sql-highlight-ms-keywords)
 
-(use-package go-mode)
+(use-package go-mode
+  :ensure t)
 
 (use-package slime
   :ensure t

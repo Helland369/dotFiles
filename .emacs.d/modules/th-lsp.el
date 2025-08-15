@@ -35,23 +35,16 @@
   (c++-mode    . lsp-mode)
   (c++-ts-mode . lsp-mode)
   (csharp-mode . lsp-mode)
-  (js2-mode    . lsp-mode)
-  ;;(web-mode    . lsp-mode)
+  ;;(js2-mode    . lsp-mode)
+  (js-ts-mode  . lsp-mode)
   (html-mode   . lsp-mode)
   (css-mode    . lsp-mode)
-  ;;(python-mode - lsp-mode)
-  ;;(go-mode     . lsp-mode)
+  (go-mode     . lsp-mode)
   (go-ts-mode  . lsp-mode)
+  ;;(rjsx-mode   . lsp-mode)
   (lsp-mode    . lsp-enable-which-key-integration)
   :commands lsp
   :config
-  ;; (with-eval-after-load 'lsp-mode
-  ;;   (add-to-list 'lsp-language-id-configuration '(lisp-mode . "commonlisp")))
-  ;; (lsp-register-client
-  ;;  (make-lsp-client
-  ;;   :new-connection (lsp-stdio-connection '("alive"))
-  ;;   :major-modes '(lisp-mode)
-  ;;   :server-id 'alive-lsp))
   (setq lsp-inlay-hint-enable t
         lsp-eldoc-enable-hover nil
         lsp-eldoc-render-all nil
