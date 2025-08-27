@@ -35,13 +35,10 @@
   (c++-mode    . lsp-mode)
   (c++-ts-mode . lsp-mode)
   (csharp-mode . lsp-mode)
-  ;;(js2-mode    . lsp-mode)
   (js-ts-mode  . lsp-mode)
   (html-mode   . lsp-mode)
   (css-mode    . lsp-mode)
-  (go-mode     . lsp-mode)
   (go-ts-mode  . lsp-mode)
-  ;;(rjsx-mode   . lsp-mode)
   (lsp-mode    . lsp-enable-which-key-integration)
   :commands lsp
   :config

@@ -39,7 +39,6 @@
 (setq major-mode-remap-alist
       '((c++-mode     . c++-ts-mode)
         (c-mode       . c-ts-mode)
-        (go-mode      . go-ts-mode)
         (html-mode    . html-ts-mode)
         (css-mode     . css-ts-mode)
         (js-mode      . js-ts-mode)
@@ -56,7 +55,7 @@
 (use-package go-ts-mode
   :mode ("\\.go\\'" . go-ts-mode)
   :config
-  (setq treesit-indent-function 2))
+  (setq go-ts-mode-indent-offset 2))
 
 (use-package html-ts-mode
   :ensure nil
@@ -68,7 +67,8 @@
 
 (use-package js-ts-mode
   :ensure nil
-  :mode ("\\.jsx\\'" . js-ts-mode))
+  :mode (("\\.js\\'"  . js-ts-mode)
+         ("\\.jsx\\'" . js-ts-mode)))
 
 (provide 'th-treesit)
 ;;; th-treesit.el ends here
