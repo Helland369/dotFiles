@@ -69,7 +69,7 @@ eval "$(zoxide init zsh)"
 
 
 #source /home/th/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  			#https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 						#https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 
 ## autosuggestion config

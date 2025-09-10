@@ -85,15 +85,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(company-box company-web counsel cpp-ts-mode dap-mode dashboard
-                 diff-hl doom-modeline evil-collection
-                 evil-nerd-commenter flycheck git-modes go-mode
-                 helpful highlight-indent-guides js2-mode
-                 kanagawa-themes lsp-ivy lsp-ui magit magit-todos
-                 nerd-icons-ivy-rich org-modern posframe prettier-js
-                 python-ts-mode rainbow-delimiters slime slime-company
-                 web-mode yasnippet)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
